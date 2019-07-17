@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Liste des produits</title>
+	<meta name="viewport"
+		content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+</h:head>
+<h:body>
+
+	<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+		<ui:define name="content">
+
+			<div class="container">
+				<div class="row">
+
+					<h:outputStylesheet library="css/" name="produits_admin.css" />
+
+					<p:panelGrid columns="1" styleClass="panelGridBorder"
+						columnClasses="panelGridColumnAdmin, panelGridColumnProduits">
+
+
+						<p:panel header="Ajouter un produit" style="text-align:center">
+							<h:form id="formAddProduit">
+								<p:growl id="growlUp" showDetail="true" sticky="true" />
+								<p:panelGrid styleClass="panelGridBorder">
+									<p:row>
+										<p:column>
+											<h:outputLabel for="nomProduit" value="Label" />
+										</p:column>
+										<p:column>
+											<p:inputText id="nomProduit" style="width:100%;"
+												value="#{actionAdminBean.produitDTO.nomProduit}"
+												label="Label" />
+										</p:column>
+										<p:column>
+											<p:message for="nomProduit" />
+										</p:column>
+									</p:row>
+
+									<p:row>
+										<p:column>
+											<h:outputLabel for="prix" value="Prix" />
+										</p:column>
+										<p:column>
+											<p:inputMask id="prix" style="width:100%;"
+												value="#{actionAdminBean.produitDTO.prixProduit}"
+												label="Prix" mask="99.99" />
+										</p:column>
+										<p:column>
+											<p:message for="prix" />
+										</p:column>
+									</p:row>
+
+									<p:row>
+										<p:column>
+											<h:outputLabel for="categorie" value="Catégorie" />
+										</p:column>
+										<p:column>
+											<p:selectOneMenu id="categorie" style="width:100%;"
+												value="#{actionAdminBean.produitDTO.categorieProduit}">
+												<p:ajax update="selecteur1" />
+												<p:ajax update="selecteur2" />
+												<f:selectItem itemLabel="Sélectionner une catégorie"
+													itemValue="" noSelectionOption="true" />
+												<f:selectItems value="#{actionAdminBean.categories}"
+													var="cat" itemValue="#{cat}"
+													itemLabel="#{cat.categorieProduit}" />
+											</p:selectOneMenu>
+										</p:column>
+										<p:column>
+											<p:message for="categorie" />
+										</p:column>
+									</p:row>
+
+
+									<p:row>
+										<p:column>
+											<h:outputLabel for="type" value="Type de produit" />
+										</p:column>
+										<p:column>
+											<p:selectOneMenu id="type" style="width:100%;"
+												value="#{actionAdminBean.produitDTO.typeProduit}">
+												<f:selectItem itemLabel="Sélectionner un type" itemValue=""
+													noSelectionOption="true" />
+												<f:selectItems value="#{actionAdminBean.types}" var="t"
+													itemValue="#{t}" itemLabel="#{t.typeProduit}" />
+											</p:selectOneMenu>
+										</p:column>
+										<p:column>
+											<p:message for="type" />
+										</p:column>
+									</p:row>
+
+									<p:row>
+										<p:column>
+											<h:outputLabel for="statuts" value="Disponibilité" />
+										</p:column>
+										<p:column>
+											<p:selectOneMenu id="statuts" style="width:100%;"
+												value="#{actionAdminBean.produitDTO.statutProduit}">
+												<f:selectItem itemLabel="Sélectionner un statut"
+													itemValue="" noSelectionOption="true" />
+												<f:selectItems value="#{actionAdminBean.statuts}" var="s"
+													itemValue="#{s}" itemLabel="#{s.statutProduit}" />
+											</p:selectOneMenu>
+										</p:column>
+										<p:column>
+											<p:message for="statuts" />
+										</p:column>
+									</p:row>
+
+									<p:row>
+										<p:column id="selecteur2"> #{actionAdminBean.produitDTO.categorieProduit} </p:column>
+									</p:row>
+									<h:outputFormat value="" />
+									<p:row id="selecteur1">
+										<p:column colspan="3">
+											<p:pickList id="produits"
+												value="#{actionAdminBean.produitsDual}" var="pc"
+												effect="bounce" itemValue="#{pc}"
+												itemLabel="#{pc.nomProduit}" showSourceControls="true"
+												showTargetControls="true" showCheckbox="true"
+												showSourceFilter="true" showTargetFilter="true"
+												filterMatchMode="contains" converter="entityConverter">
+
+												<f:facet name="sourceCaption">Disponible</f:facet>
+												<f:facet name="targetCaption">Séléctionnés</f:facet>
+
+												<p:ajax event="transfer"
+													listener="#{actionAdminBean.onTransfer}" update="growlUp" />
+												<p:column>
+													<p:graphicImage library="images/food/"
+														name="#{pc.nomImageProduit}" style="width:50px;" />
+												</p:column>
+												<p:column>
+													<h:outputText value="#{pc.nomProduit}" />
+												</p:column>
+											</p:pickList>
+										</p:column>
+									</p:row>
+
+									<p:row>
+										<p:column colspan="3">
+											<p:fileUpload id="image" update="growlUp"
+												fileUploadListener="#{actionAdminBean.upload}"
+												mode="advanced" dragDropSupport="true"
+												allowTypes="/(\.|\/)(gif|jpe?g|png)$/" sizeLimit="100000" />
+										</p:column>
+									</p:row>
+									<p:row>
+										<p:column colspan="3">
+											<p:commandButton id="submit" value="Envoyer" ajax="false"
+												action="#{actionAdminBean.addProduit}" event="transfer"
+												listener="#{actionAdminBean.onTransfer}" />
+											<p:message for="submit" />
+										</p:column>
+										<p:column>
+
+										</p:column>
+									</p:row>
+								</p:panelGrid>
+
+								<input type="hidden" id="rep" name="rep" value="food" />
+							</h:form>
+						</p:panel>
+
+
+						<h:form id="formListProcuitComposer">
+							<p:dataGrid var="produit"
+								value="#{actionAdminBean.produitComposer}" columns="2"
+								layout="grid" rows="12" paginator="true" id="produits"
+								paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+								rowsPerPageTemplate="6,12,18">
+
+								<f:facet name="header">Nos sandwichs</f:facet>
+
+								<p:panel header="#{produit.nomProduit}"
+									style="text-align:center">
+									<h:panelGrid columns="2" style="width:100%">
+										<p:graphicImage cache="false" library="images/food/"
+											name="#{produit.nomImageProduit}" width="250px" />
+
+										<p:dataList value="#{produit.ingredients}" var="ingredient"
+											type="definition">
+											<h:outputText value="#{ingredient.nomIngredient}" />
+										</p:dataList>
+									</h:panelGrid>
+								</p:panel>
+
+							</p:dataGrid>
+						</h:form>
+
+					</p:panelGrid>
+
+				</div>
+			</div>
+
+		</ui:define>
+	</ui:composition>
+
+</h:body>
+</html>
+

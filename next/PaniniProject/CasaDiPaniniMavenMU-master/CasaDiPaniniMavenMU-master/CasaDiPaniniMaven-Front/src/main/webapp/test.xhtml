@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<head>
+<title>Insert title here</title>
+</head>
+<body>
+	<h:form>
+
+		<div class="input-group input-group-lg">
+			<p:inputText type="text"
+				class="form-control" placeholder="Username" value="#{actionClientBean.email}"/>
+		</div>
+
+		<div class="input-group">
+			<p:inputText type="text"
+				class="form-control" placeholder="Username" value="#{actionClientBean.password}"/>
+		</div>
+
+		
+		<p:commandButton value="Connexion"
+									action="#{actionClientBean.connecterClient}" ajax="false"
+									icon="ui-icon-check" validateClient="true" />
+
+
+		<f:facet name="middle">
+			<h:outputStylesheet name="css/bootstrap.css" />
+
+			<script
+				src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" />
+
+			<h:outputScript name="js/bootstrap.js" />
+		</f:facet>
+
+		<f:facet name="last"></f:facet>
+
+	</h:form>
+</body>
+</html>

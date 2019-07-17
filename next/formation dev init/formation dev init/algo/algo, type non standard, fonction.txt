@@ -1,0 +1,53 @@
+programme: Calcul de différence d'age
+
+type:
+
+personne = enregistrement
+nom: string[15]
+prenom: string[15]
+age: entier
+
+variable:
+
+employe: tableau [1..10] type personne;
+result,i, j: entier
+p1, p2: personne
+
+
+function différence (p1, p2 : personne)
+
+//debut
+
+	si p1 > p2 alors
+		retourne (p1 - p2)
+
+	sinom
+		retourne (p2 - p1)
+//fin
+
+
+//programme principal
+
+	ecrire(donner le nom de la premier personne a rechercher)
+	lire (p1)
+	ecrire(donner le nom de la deuxième personne a rechercher)
+	lire (p2)
+	
+	pour i=1 a 10 faire
+	//debut
+	si p1 = employe[i].nom alors
+		p1 = employe[i].age
+			
+		pour j=1 a 10 faire
+		//debut
+		si p2 = employe[j].nom alors
+			p2 = employe[j].age
+		sinom
+		next j
+		//fin
+	sinom
+	next i
+	//fin
+	
+	result = difference(p1, p2)
+	ecrire ('la difference d'age est de : ', result, 'ans')

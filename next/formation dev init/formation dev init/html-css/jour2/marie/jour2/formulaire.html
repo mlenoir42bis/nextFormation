@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Les formulaires</title>
+    </head>
+    <body>
+        <h1>Les formulaires</h1>
+        <form action="liens.html" method="POST">
+            <input type="radio" name="civ" value="mme">Mme <br/> 
+            <input type="radio" name="civ" value="m">M. <br/> 
+            
+            <label for="nom">Votre nom</label>
+            <input type="text" name="nom" id="nom"> <br/>
+            
+            <label for="prenom">Votre prénom</label>
+            <input type='text' name='prenom' id='prenom'> <br/>
+            
+            <label for="email">Votre email</label>
+            <input type="email" name="email" id="email" placeholder="ex: contact@toto.com">
+            
+            <label for="etat_civil">Votre état civil</label>
+            <select name="etat_civil" id="etat_civil">
+                <option value=""></option>
+                <option value="celibataire">Célibataire</option>
+                <option value="marie">Marié(e)</option>
+                <option selected value="divorce">Divorcé(e)</option>
+                <option value="veuf">Veuf / Veuve</option>
+            </select>
+            <br/>
+            <label for="passions">Vos passions</label>
+            <select multiple="" name="passions[]" id="passions">
+                <option value="cinema">Cinéma</option>
+                <option selected value="sport">Sport</option>
+                <option value="voyages">Voyages</option>
+            </select>
+            <br>
+            <h2>Vos animaux de compagnie</h2>
+<input type="checkbox" name="animaux" value="chat"> chat <br>
+<input type="checkbox" name="animaux" value="chien"> chien <br> 
+<input type="checkbox" name="animaux" value="poissons"> poissons <br> 
+<label for="a_propos">A propos de vous</label><br/>
+<textarea name="a_propos" id="a_propos" rows="8" cols="99"></textarea>
+ <hr/>
+ 
+ <input type="date">
+ <input type="color">
+            <input type="submit" value="s'enregistrer">
+        </form>
+    </body>
+</html>

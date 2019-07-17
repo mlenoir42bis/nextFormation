@@ -1,0 +1,12 @@
+/*css*/
+
+#wheels{
+	width:36px;
+	height:30px;
+	background-image: url('../img/wheels.png');
+}
+
+#wheels:hover{
+	background-position: 0px -30px;
+}
+	

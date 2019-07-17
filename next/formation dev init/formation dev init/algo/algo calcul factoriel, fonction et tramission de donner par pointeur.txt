@@ -1,0 +1,36 @@
+programme: calcl d'un factoriel (utilisation d'une fonction et d'un passage d'information par pointeur)
+
+type: ptr: ^entier
+
+variable: fact: ptr
+
+//************************************************
+fonction calc_fact ()
+
+variable:
+n : ptr
+result, m: entier	
+
+//debut
+allouer(n)
+
+ecrire (donner un nombre pour calculer son factoriel)
+lire (m)
+
+	pour i:=1 a m faire
+	//debut
+	factoriel = factoriel * i
+	//fin
+
+n^ = factoriel
+
+return n
+//fin 
+//************************************************
+
+//debut
+
+fact = calc_fact()
+ecrire fact^
+
+//fin

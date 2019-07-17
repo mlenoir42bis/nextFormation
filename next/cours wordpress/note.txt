@@ -1,0 +1,17 @@
+theme:
+themeforest
+
+hebergement / serveur dedié:
+kimsufi
+hostinger
+
+lien:
+flaticon
+
+wordpress:
+hook action wordpress
+hook filter wordpress
+
+lien:
+http://www.bastoo.com/bootstrap-for-wordpress/
+

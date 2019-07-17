@@ -1,0 +1,39 @@
+programme: recherche nom dans tableau
+type:
+
+personne = enregistrement
+nom: string[15]
+prenom: string[15]
+
+variable:
+
+employe: tableau [1..10] type personne;
+i: entier
+tmp: string
+
+
+//debut:
+
+//saisi du tableau employe
+pour i=1 a 10 faire
+
+	//debut
+	ecrire (donner le nom et le prenom)
+	lire (employe[i].nom, employe[i].prenom)
+	//fin
+
+//recherche d'un enregistrement dans le tableau employe
+
+	ecrire(donner le nom a rechercher)
+	lire (tmp)
+	
+	pour i=1 a 10 faire
+		//debut
+		si tmp = employe[i].nom alors
+		ecrire ('collone'), i , (':')
+		ecrire ( employe[i].nom )
+		ecrire ( employe[i].prenom )
+		sinom
+		next i
+		//fin
+//fin

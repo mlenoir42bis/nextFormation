@@ -1,0 +1,159 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body{
+	counter-reset: mon_compteur;
+}
+
+#wrapper{
+    width:400px;
+    margin:0 auto;
+}
+
+form{
+    background-color: #9cbc2c;
+    border-radius:5px;
+    padding:10px;
+}
+
+fieldset{
+    margin-top:10px;
+}
+
+legend{
+    color: #384313;
+    font-size: 16px;
+    font-weight: bold;
+    padding-bottom: 10px;
+	counter-increment: mon_compteur;
+}
+
+legend:before {
+	content: "Etape " counter(mon_compteur) " ";
+}
+
+.form_field{
+    border:2px solid rgba(255,255,255,0.6);
+    border-radius: 5px;
+    margin-bottom:2px;
+    padding-left:5px;
+    height:30px;
+    padding-top: 5px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.special{
+    height:60px;
+}
+
+.special label{
+    margin-top: -47px;
+}
+
+.form_field label{
+    font-size: 13px;
+    width: 110px;
+    display:inline-block;
+    color:#111111;
+}
+
+.form_field input[type=text], .form_field input[type=email], .form_field input[type=tel]{
+    border:none;
+    outline:0;
+    border-radius:5px;
+    width:200px;
+    height:25px;
+}
+
+textarea{
+    border-radius: 5px;
+    width:200px;
+    border:none;
+    outline:0;
+}
+
+.card{
+    height:50px;
+}
+
+.card label:first-child{
+    padding-left: 0;
+    width: 150px;
+}
+
+.card img{
+    vertical-align: text-bottom;
+    margin-left:5px;
+}
+
+.card label{
+    display: inline-block;
+    height: 20px;
+    margin-left: 5px;
+    padding-left: 32px;
+    padding-top: 5px;
+    width: 30px;
+    background-repeat: no-repeat;
+}
+
+.visa{
+    background-image: url('../img/visa.gif');
+}
+
+.amex{
+    background-image: url('../img/amex.gif');
+}
+
+.master{
+    background-image: url('../img/mastercard.gif');
+}
+
+::-webkit-input-placeholder {
+    font-style:italic;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    font-style:italic;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    font-style:italic; 
+}
+
+:-ms-input-placeholder {  
+    font-style:italic;
+}
+
+input:focus,textarea:focus{
+    background-color: #eeeeee;
+}
+
+input[type=submit]{
+    background: #384313;
+    border: none;
+    border-radius: 20px;
+    color: #ffffff;
+    display: block;
+    font: 18px;
+    letter-spacing: 1px;
+    margin: 20px auto auto;
+    padding: 7px 25px;
+    text-shadow: 0 1px 1px #000000;
+    text-transform: uppercase;
+}
+
+/*
+input:required{
+    border:1px solid red!important;
+}
+
+input:invalid{
+	border:none;
+	background-color: pink;
+}
+
+
+input[type=text]:empty{
+	background: #FFFFFF;
+	border:none
+}*/

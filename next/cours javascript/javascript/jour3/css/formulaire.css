@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 févr. 2015, 14:46:34
+    Author     : stagiaire
+*/
+
+form{
+    background-color: #EEEEEE;
+    border-radius: 5px;
+    width:400px;
+    padding:10px;
+    text-align:center;
+}
+
+label{
+    display:inline-block;
+    width:100px;
+}
+
+input[type=text], textarea{
+    width:250px;
+}
+
+.formField{
+    margin-bottom:5px;
+    text-align:left;
+}
+
+.vertical label{
+    vertical-align: top;
+}
+
+.error{
+    border-radius: 5px;
+    background-color: red;
+    color: #FFFFFF;
+    font-size:14px;
+    font-weight: bold;
+    min-height:20px;
+    width:80%;
+    margin:0px auto 20px auto;
+    padding:5px;
+}
+
+.error p{
+    margin:0;
+}
+
+input[name=sexe_autre]{
+    display:none;
+}

@@ -1,0 +1,9 @@
+hebergement:
+
+mutualise
+serveur privé
+serveur dedié
+cloud: aws / rackspace
+
+lien utile:
+remixjob

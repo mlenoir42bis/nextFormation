@@ -1,0 +1,127 @@
+exo1:
+programme:
+
+variable
+a, b, somme, produit : reel
+
+//debut
+
+ecrire (donner deux nombre, pour en calculer la somme et le produit)
+lire (a, b)
+
+somme = a + b
+produit = a * b
+
+si a<0 alors
+	ecrire a (est un nombre negatif)
+sinon 
+	ecrire a (est un nombre positif)
+
+si b<0 alors
+	ecrire b (est un nombre negatif)
+sinon 
+	ecrire b (est un nombre positif)
+
+ecrire( la somme des deux nombre donnés est) somme
+ecrire( le produit des deux nombre donnés est) produit
+
+//fin
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+exo2:
+programme:
+type:
+jour= [1..31]
+mois= [1..12]
+anne= [1..9999]
+variable:
+nom : chaine
+anniv : date
+j : jour 
+m : mois
+an : anne
+
+//debut
+ecrire (quels votre nom d'utilisateur)
+lire(nom)
+
+si nom = 'martin' alors
+	ecrire (bienvenu martin)
+	ecrire (ecriver votre date de naissance sous la forme 'jour:XX mois:XX anne:XXXX')
+	ecrire (donner votre jour de naissance)
+	lire (j)
+	ecrire (donner votre mois de naissance)
+	lire (m)
+	ecrire (donner votre anne de naissance)
+	lire (an)
+
+	anniv = jour + '/' + mois + '/' + anne
+	
+	si anniv = now() alors
+	ecrire(Joyeux anniversaire Martin)
+sinon
+ecrire(erreur: non d'utilisateur inconnu)
+//fin
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+exo3:
+programme:
+
+variable:
+l, n, paire, nbr : entier 
+tab = tableau [1, n] entier
+
+//debut
+ecrire (donner le nombre total de nombre de votre liste)
+lire(n)
+
+n = n + 1
+
+ecrire (les elements de votre liste sont demandé 1 par 1)
+pour l:=1 a n faire
+	//debut
+	ecrire (donner la valeur d'un element de la liste)
+	lire(tab[1, l])
+	//fin
+
+tab[1, n] = -1
+
+pour b:=1 a n faire
+	//debut
+	nbr= tab[1, b]
+
+	si (nbr%2 = 0) alors
+	paire = paire + 1
+	//fin
+
+//calcul %
+ecrire ((paire*100)/(n-1))
+
+//fin
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+exo4
+programme:
+
+variable:
+m, n : entier
+
+//debut
+ecrire (donner deux entier positif)
+lire (m , n)
+
+si m<n alors
+	tant que m<n fair
+	ecrire (le premier nombre saisie est inferieur au deuxieme)
+	ecrire (donner deux entier positif)
+	lire (m , n)
+sinom
+	pour b:=m a n faire
+		//debut
+		si (b%2 = 0) alors
+		ecrire (b)
+		//fin
+//fin
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+

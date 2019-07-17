@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>PSD => HTML</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/text.css">
+	<link rel="stylesheet" href="css/960_24_col.css">
+	<link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+
+	<div class="container_24">
+		<header>
+			<!-- clearfix permet de hacker le conteneur inline pour qu'il soit considéré comme un block. Ce qui est plus logique car il contient une image en bkg. -->
+			<h1 class="clearfix"><a href="index.html">Black + White</a></h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Our services</a></li>
+					<li><a href="#"How we work></a></li>
+					<li><a href="#">Testimonials</a></li>
+					<li><a class="selected" href="work.html">Work Examples</a></li>
+				</ul>
+			</nav>
+			
+			
+		</header>
+
+	<!-- sans le clearfix, le footer n'est pas bien isolé sous les blocks. son margin-top n'est pas bien pris en compte par exemple. Cela vient de la hauteur des blocs contenu dans le main qui n'est pas égale  -->
+		<div class="main clearfix">
+			<div class="grid_12 work">
+				
+				
+				<img src="images/work_1.jpg" alt="">
+				<h2>Work example 1</h2>
+				<h4>and a very brief description of the work in large bold letters followed by</h4>	
+				<p>Donec odio arcu, faucibus vel, accumsan eu, cursus in, ipsum. Pellentesque blandit condimentum purus. Suspendisse commodo dui. </p>
+				<p>Quisque a tellus. Vestibulum tincidunt lorem ac est. Vivamus augue quam, hendrerit at, porta ut, tristique ac, lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur fringilla eros ultrices justo. Nunc condimentum. Ut id dui in erat vulputate ultricies.</p>
+				<p><a href="#" class="button">Read More</a></p>
+			</div>
+
+			<div class="grid_12 work">
+				
+				
+				<img src="images/work_2.jpg" alt="">
+				<h2>Work example 2</h2>
+				
+				<h4>and a very brief description of the work in large bold letters followed by</h4>
+
+				<p>Donec odio arcu, faucibus vel, accumsan eu, cursus in, ipsum. Pellentesque blandit condimentum purus. Suspendisse commodo dui. </p>
+				<p>Quisque a tellus. Vestibulum tincidunt lorem ac est. Vivamus augue quam, hendrerit at, porta ut, tristique ac, lacus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur fringilla eros ultrices justo. Nunc condimentum. Ut id dui in erat vulputate ultricies.</p>
+				<p><a href="#" class="button">Read More</a></p>
+			</div>
+
+			
+		</div>
+		<footer>
+			<p><strong>black+white</strong> themes via <a href="#">themeforest</a></p>
+		</footer>
+	</div> <!-- end container -->
+	
+</body>
+</html>

@@ -1,0 +1,63 @@
+exercice :
+
+faire la somme de deux matrice.
+
+--------------------------------------------------------------------
+i, j, lign, col: int;
+
+lign= 3;
+col= 3;
+
+
+var M1= tableau[1..lign,1..col]
+var M2= tableau[1..lign,1..col]
+var M3= tableau[1..lign,1..col]
+
+
+//saisie des element de la matrice1
+
+	for i:=1 to ligne do
+	//deb:	 	
+		for j:=1 to col do
+		//deb:
+		ecrire ("donner le , i, de la  matrice 1")
+		lire(M1[i,j])
+		//fin
+	//fin:
+
+//saisie des element de la matrice2
+
+	for i:=1 to ligne do
+	//deb: 	
+		for j:=1 to col do
+		//deb:
+		ecrire ("donner le , i, de la  matrice 2")
+		lire(M2[i,j])
+		//fin
+	//fin:
+
+//somme des deux matrice:
+	
+	for i:=1 to ligne do
+	//deb:		
+		for j:=1 to col do
+		//deb:	
+
+		M3[i,j]= 0
+
+			for k:=1 to lign do
+			//deb:
+			
+			M3[i,j]= M3[i,j]+(M1[i,k]*M2[k,j])
+			
+				//affichage resultat	
+				for i:=1 to ligne do
+				//deb:		
+					for j:=1 to col do
+					//deb:
+					ecrire M3[i,j]
+					//fin
+				//fin
+			//fin
+		//fin
+	//fin

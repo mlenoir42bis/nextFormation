@@ -1,0 +1,89 @@
+/*style*/
+
+/*tous les tags*/
+* {
+	color: red;
+}
+
+/*selection d'un tag*/
+p{
+	color:black;
+}
+
+/*selection d'une classe*/
+.description{
+	color:green;
+}
+
+/*selection d'une id*/
+#div1{
+	width:150px;
+	background-color: skyblue;
+}
+
+/*hierarchie
+p qui a un ancetre avec l'id div1
+ca va prendre tous les p du div1
+*/
+#div1 p{
+	color:blue;
+}
+
+/*p qui a un ancetre direct avec id div1*/
+#div1>p{
+	font-size:20px;
+}
+
+#div1 section p{
+	font-size:8px;
+}
+
+/* on recupere le 1er p de la section*/
+/*pseudo class*/
+#div1 section p:first-child{
+	font-size:12px;
+	color: pink;
+}
+
+/*+ => element à cote*/
+#div1+p{
+	color: orange;
+}
+
+/* selection avec attribut 
+tag[attribut = valeur]
+*/
+input[type=text]{
+	background-color: pink;
+}
+
+a[title=coucou]{
+	text-decoration: none;
+	font-weight:bold;
+}
+
+/*on recupere le ul qui est precedé par un div*/
+div~ul {
+	list-style-type: square;
+}
+
+/*pseudo element*/
+p:before{
+	content:' ';
+	width:10px;
+	height:10px;
+	background-color: pink;
+	display:block;
+	background-image:url('../img/puce.png');
+	background-repeat:no-repeat;
+}
+
+/*pseudo element*/
+p:after{
+	content: ' apres';
+}
+
+div{
+	background-color: pink!important;
+}
+

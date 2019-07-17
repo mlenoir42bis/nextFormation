@@ -1,0 +1,67 @@
+https://fr.wordpress.org/
+Dezipper et mettre le dossier wordpress à la racine de xampp/htdocs.
+Lors de l'installation du site, on décoche la rubrique "vie privée" (indexer le site) pendant le dev, on recoche quand on a fini (reglages/lecture). C'est ici qu'on définira une page statique en tant que page d'accueil (à créer).
+Panneau ADMIN : [nom_du_site]/wp-admin/
+Exemple: http://mywordpress.com/wp-admin/
+Search and replace (pour modifier à terme le nom du site). En dev le site s'appellera toto.com mais à la mise en ligne il aura un vrai nom. Mais les infos liées à la base seront matchées sur le no du site de dev (toto.com).
+https://interconnectit.com/products/search-and-replace-for-wordpress-databases/
+Il y a moyen de pré-écrire ses articles et de les scheduler (demander à wordpress d'en publier 1 toutes les heures par exemple, sans qu'on soit devant le pc).
+Trouver les plugins WP : https://wordpress.org/plugins/
+Flux de syndication = Flux rss (format de fichier .xml qui te lie au timeline d'un site, LeMonde par exemple. Recopier le lien de la barre d'adresse dans FEEDLY par exemple sur mobile, pour WP ddl un pluggin RSS).
+Cocher dans reglages/discussion, rubrique "avant publication" : Le commentaire doit être approuvé manuellement!
+Permalien : modifier les URI. Activer les permaliens crée un fichier .htaccess.
+Pour trouver un theme payant mais sécurisé : themeforest.net (50€ / 58$)
+Si on souhaite télécharger un theme pour notre WP, le dezipper et le placer dans wp-content/theme. Activer dans "Apparence".
+Eviter de modifier le css dans "apparence/editeur" car si on met a jour le plugin lié, le css sera écrasé.
+Pour afficher les pages créées sous forme de menus,créér un menu : "apparence/menu". Puis dans gérer les emplacements, sélectionner le menu créé.
+Options de l'écran : cible du lien (pour activer les liens hypertextes).
+Eviter de modifier le code natif, les fichiers natifs.
+Infos pour sécuriser un wordpress = voir site de korben.
+
+*****************************
+INSTALLER UN SERVEUR DEDIÉ
+1/serveur 9,99€ chez kimsufi, prendre un ubuntu gratos, recevoir les codes (se lier avec ovh), installer en lignes de commandes APACHE/MYSQL/PHP
+*****************************
+SSH = port 22
+*****************************
+PLUGINS DANS WP-CONTENT!
+
+Plugin pour insérer des trucs cools
+https://wordpress.org/plugins/shortcodes-ultimate/
+
+Plugin pour un editeur de texte WP plus complet :
+https://wordpress.org/plugins/tinymce-advanced/
+
+Plugin pour customiser les articles
+https://wordpress.org/plugins/advanced-custom-fields/
+http://www.advancedcustomfields.com/ (pour la doc)
+
+Pour surcharger un theme, on duplique l'existant, et on le renomme [nom_theme]-child. On vide ce nouveau dossier et on y créer un fichier .css.
+http://codex.wordpress.org/fr:Th%C3%A8mes_Enfant
+Placer l'en-tête (voir codex) dans le nouveau css, puis importer le dossier "père"
+Pour surcharger, copier le dossier du père, le coller dans le dossier enfant et modifier celui du dossier enfant. L'enfant utilise le style.css du père !
+
+Customiser les posts (articles)
+http://codex.wordpress.org/Post_Types
+
+
+Dans wordpress on a 2 types de hook: action et filter. (add_action, add_filter). Les hook permettent de customiser le CMS Wordpress
+Hook Action : http://codex.wordpress.org/Plugin_API/Action_Reference
+Hook Filter : http://codex.wordpress.org/Plugin_API/Filter_Reference
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

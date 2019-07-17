@@ -1,0 +1,56 @@
+/*
+Theme Name: Fab Theme
+Theme URI: http://fab.com/theme
+Author: Fab
+Author URI: http://fab.com
+Description: The ultimate theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: tip top, genial, ultime
+Text Domain: fab_theme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+footer{
+	margin-top:20px;
+	background-color: #777777;
+	border-radius:5px;
+}
+
+footer h4{
+	color:#FFFFFF;
+}
+
+footer ul{
+	list-style-type:none;
+	padding:0;
+}
+
+footer a{
+	color:#FFFFFF;
+}
+
+.carousel{
+	height:500px;
+	background-color:#CCCCCC;
+}
+
+.carousel .item img {
+	width: auto;
+	height: 500px;
+	margin:0 auto;
+}
+
+.my_header{
+	position:absolute;
+	left: 0;
+	right: 0;
+	z-index:20;
+}
+
+#html{
+	margin-top:0!important;
+}

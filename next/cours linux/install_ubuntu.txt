@@ -1,0 +1,145 @@
+//install serveur revue
+
+//serveur
+passwd root => changer le mot de passe root
+
+apt-get update
+
+//creer le user ghorgore31
+adduser ghorgore31
+sudo adduser ghorgore31 sudo
+
+//vsftpd
+apt-get install vsftpd
+
+fichier de conf => /etc/vsftpd.conf
+Modif de la conf et restart du serveur
+local_enable=YES
+write_enable=YES
+local_umask=022
+
+/etc/init.d/vsftpd restart
+
+//apache2
+sudo apt-get install apache2
+fichier de conf => /etc/apache2/apache2.conf
+
+creer un répertoire vhosts dans /var/www/vhosts
+enable vhost_alias.load => sudo a2enmod vhost_alias
+desactiver le module autoindex =>sudo a2dismod autoindex
+Pour wordpress (permaliens) => sudo a2enmod rewrite
+
+ajouter ces lignes dans le fichier apache2.conf
+
+#mass virtual hostings
+UseCanonicalName Off
+
+VirtualDocumentRoot /var/www/vhosts/%0
+
+<Directory "/var/www/vhosts/">
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+
+editer le fichier /etc/apache2/sites-available/default
+Modifier l'email du serveradmin, et docroot :
+DocumentRoot /var/www/vhosts/
+
+redemarrer apache
+sudo /etc/init.d/apache2 restart
+ou
+sudo service apache2 restart
+
+Si un message du style Could not determine domain name for ServerName 
+ajouter :
+ServerName localhost dans le fichier /etc/apache2/apache2.conf
+
+optionnel
+modifier le fichier host: 
+127.0.0.1	localhost.localdomain localhost
+
+
+//mysql
+sudo apt-get install mysql-server
+Saisir un mot de passe pour root
+
+//optionnel si on utilise phpmyadmin
+Pour pouvoir attaquer le serveur sur port 3306 à distance (genre sqlyog)
+fichier de conf => /etc/mysql/my.cnf
+Commenter la ligne bind addresse dans le fichier de conf
+
+executer cette requete avec le bon password
+CREATE USER 'root'@'%' IDENTIFIED BY PASSWORD '*AD40DC79A38BB8A92C538F3EDC725671702669CB'; 
+
+GRANT ALL PRIVILEGES ON * . * TO 'root'@'%' 
+IDENTIFIED BY PASSWORD '*AD40DC79A38BB8A92C538F3EDC725671702669CB' 
+WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 
+MAX_CONNECTIONS_PER_HOUR 0 
+MAX_UPDATES_PER_HOUR 0 
+MAX_USER_CONNECTIONS 0 ;
+
+
+//php
+sudo apt-get install php5 php5-mysql php5-gd
+fichier de conf => /etc/php5/apache2/php.ini
+
+//decommenter ces lignes dans le php.ini
+; display_errors
+   Default Value: On
+   Development Value: On
+   Production Value: Off
+
+; error_reporting
+   Default Value: E_ALL & ~E_NOTICE
+   Development Value: E_ALL | E_STRICT
+   Production Value: E_ALL & ~E_DEPRECATED
+
+
+//phpmyadmin
+donwloader les sources de phpmyadmin
+dezip dans /var/www/vhost/phpmyadmin.nom_de_domaine
+sudo cp config.sample.inc.php config.inc.php
+Si probleme avec mysqli, mettre mysql dans extension dans le fichier de conf
+
+
+//postfix
+sudo apt-get install postfix
+Choisir site internet pendant l'install, entree, entree
+
+fichier de conf => /etc/postfix/main.cf
+
+editer ensuite le fichier main.cf
+Lignes à remplir / saisir
+myhostname = mail.g31c.com
+alias_maps = hash:/etc/aliases
+alias_database = hash:/etc/aliases
+myorigin = $myhostname
+mydestination = mail.g31c.com, localhost.g31c.com, , localhost
+relayhost = 
+mynetworks = 127.0.0.0/8
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+
+
+//java
+install java7
+http://www.ubuntututorials.com/install-oracle-java-jdk-7-ubuntu-12-04/
+
+Download jdk-7u7-linux-i586.tar.gz chez oracle
+sudo mkdir -p /usr/lib/jvm
+sudo tar -xf /home/ghorgore31/jdk-7u7-linux-i586.tar.gz -C /usr/lib/jvm/
+
+sudo update-alternatives --install "/usr/bin/java" "java" "/usr/lib/jvm/jdk1.7.0_07/bin/java" 1
+sudo update-alternatives --install "/usr/bin/javac" "javac" "/usr/lib/jvm/jdk1.7.0_07/bin/javac" 1
+sudo update-alternatives --install "/usr/bin/javaws" "javaws" "/usr/lib/jvm/jdk1.7.0_07/bin/javaws" 1
+
+sudo update-alternatives --config java
+sudo update-alternatives --config javac 
+sudo update-alternatives --config javaws
+
+
+//change size of vm hard drive
+"C:\Program Files\Oracle\VirtualBox\VboxManage.exe" modifyhd ubuntu1404.vdi --resize 20480

@@ -1,0 +1,12 @@
+{
+	"name": "node-chat-test",
+	"version": "0.0.1",
+	"private": true,
+	"description": "test chat", 
+	"main": "server.js",
+	"author": "guillaume",
+	"dependencies": {
+		"express": "latest",
+		"socket.io": "latest"
+	}
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Les tableaux</title>
+        <style>
+            td,tr,th {
+                border:1px solid #000;
+            }
+            thead tr th:first-child {
+                border:none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Les tableaux</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Nom produit</th>
+                    <th>Desc produit</th>
+                    <th>P.U produit</th>
+                    <th>Stock produit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>L.1</th>
+                    <td>Basket</td>
+                    <td>Basket desc</td>
+                    <td>50.00 €</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th>L.2</th>
+                    <td>Pull</td>
+                    <td>pull desc</td>
+                    <td>50.00 €</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <th>L.3</th>
+                    <td>Tshirt</td>
+                    <td>tshirt desc</td>
+                    <td>50.00 €</td>
+                    <td>10</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <td colspan="3"></td>
+                    <td>150</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+    </body>
+</html>

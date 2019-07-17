@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Exos CSS</title>  
+      <style>
+  /*Trouvez les sélécteurs CSS vous permettant de répondre aux questions ci-dessous*/
+  /*N'OUBLIEZ PAS DE COMMENTER VOS REPONSES PETIT à PETIT */
+  
+  /* Exemple:Q.1 => Tous les éléments */ 
+/*    * {
+        color: red;
+      }*/
+  /*  Q.2 => tous les éléments p */
+/*  p {
+      color:red;
+  }*/
+  /*  Q.3 => tous les éléments p et tous les éléments div */
+/*  p, div {
+      color:red;
+  }*/
+  /*  Q.4 => tous les éléments dont un des attributs class vaut important */
+/*  .important {
+      color:red;
+  }*/
+/*ou bien*/
+/*[class~='important'] {
+    color:red;
+}*/
+  /*  Q.5 => tous les éléments div dont un des attributs class vaut important */
+/*  div.important {
+      color:red;
+  }*/
+/*ou bien*/
+/*div[class~='important'] {
+    color:red;
+}*/
+  /*  Q.6 => tous les éléments qui ont la class important et tous les éléments qui ont la class categorie */
+/*  .important, .categorie {
+      color:red;
+  }*/
+  /*ou bien*/
+/*  [class~='important'], [class~='categorie'] {
+       color:red;
+  }*/
+  /*  Q.7 => tous les éléments qui ont à la fois la class important et la class categorie */
+/*  .categorie.important {
+      color:red;
+  }*/
+/*  ou bien */
+/*  [class='important categorie'] {
+      color:red;
+  }*/
+  /*  Q.8 => tous les éléments span qui suivent immédiatement un span */
+/*  span + span {
+      color:red;
+  }*/
+  
+  /*  Q.9 => tous les éléments p qui suivent un div (par forcément immédiatement) */
+/*  div ~ p {
+      color: red;
+  }*/
+  /*  Q.10 =>tous les éléments a fils immédiat de body */
+/*  body > a {
+      color:red;
+  }*/
+  /*  Q.11 =>tous les éléments div descendants d'un div */
+/*  div div {
+      color:red;
+  }*/
+  /*  Q.12 =>tous les éléments dont la class est important descendant d'un div */
+/*  div .important {
+      color:red;
+  }*/
+  /*  Q.13 =>tous les éléments div ayant 2 ancetres div */
+/*  div div div {
+      color:red;
+  }*/
+
+    </style>
+</head>
+<body>
+		 body
+     <a href="#">Link Body</a>
+        <div id="premier">
+            D1
+             <a href="#">Link D1</a>
+            
+            <span>D1 S1 <a href="#">Link D1 S1</a></span>
+            <span>D1 S2</span>
+            <span>D1 S3</span>
+        </div>
+        <div>
+            D2
+            <span>D2 S1</span>
+            <span>D2 S2</span>
+            <span class="important">D2 S3</span>
+        </div>
+        <div class="important categorie">
+            D3
+            <div>
+                D3 D1
+                <div>
+                    D3 D1 D1
+                </div>
+            </div>
+            <div>D3 D2</div>
+            <div>D3 D3</div>
+        </div>
+        <p>
+            P4
+            <span>P4 S1</span>
+            <span>P4 S2</span>
+            <span class="important">P4 S3</span>
+        </p>
+        <p class="important">
+            P5
+            <span>P5 S1</span>
+            <span>P5 S2</span>
+            <span class="categorie">P5 S3</span>
+        </p>
+</body>
+</html>

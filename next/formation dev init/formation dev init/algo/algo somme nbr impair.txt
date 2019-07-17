@@ -1,0 +1,23 @@
+programme: calcul de la somme de nombre impair
+
+var:
+val: integer
+
+//----------------------------------------
+function somme_impair(n: integer) integer
+var m, somme: integer
+
+//debut
+for m:=1 to n faire
+	//debut
+	somme= somme+(2*m-1)
+	//fin
+
+return somme
+//fin
+//----------------------------------------
+//debut
+ecrire(donnez un nombre)
+lire(val)
+ecrire(somme_impair(val))
+//fin

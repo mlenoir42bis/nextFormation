@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr" ng-app="movieApp">
+	<head>
+		<meta charset="utf-8" />
+		<title>Angular | jQuery</title>
+		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/flatly/bootstrap.min.css">
+		<link href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		
+		<div class="container" ng-controller="movieListCtrl">
+			
+			<div class="movie" ng-repeat="movie in movies">
+				<h3>{{ movie.title }}</h3>
+				<p>{{ movie.rating }}</p>
+				<img ng-src="{{ movie.poster }}" alt="{{ movie.title }}" ng-click="getYtResults(movie.title)" />
+			</div>
+
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<script>
+			var movieApp = angular.module('movieApp', []);
+
+			movieApp.controller('movieListCtrl', function($scope, $http){
+
+				$http.get('movies.json').success(function(data){
+					$scope.movies = data.movies;
+				});
+
+				$scope.getYtResults = function(title){
+					console.log(title);
+					$http({
+						url: '',
+						method: 'get',
+						params: {
+							
+						}
+					});
+				}
+
+			});
+		</script>
+		
+	</body>
+</html>

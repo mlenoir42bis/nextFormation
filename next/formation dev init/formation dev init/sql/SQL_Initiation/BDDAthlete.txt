@@ -1,0 +1,182 @@
+﻿#----------------------------------------#
+#     CREATION DE LA BASE DE DONNEES     #
+#----------------------------------------#
+
+CREATE DATABASE IF NOT EXISTS DB_ATHLETE;
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#     INDIQUER LA BASE SUR LAQUELLE      #
+#   S'EFFECTUE LA CREATION DES TABLES    #
+#----------------------------------------#
+
+USE DB_ATHLETE;
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#      CREATION DE LA TABLE ATHLETE      #
+#----------------------------------------#
+
+
+CREATE TABLE IF NOT EXISTS T_athlete
+ (
+  id_athlete     INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  id_sport       INT NOT NULL,
+  id_competition INT,
+  id_pays        INT,
+  nom_athlete    VARCHAR(50) NOT NULL,
+  pren_athlete   VARCHAR(50) NOT NULL
+);
+
+  #--Insertion des données dans la table athlete--#
+  
+INSERT INTO t_athlete(id_athlete,id_sport,id_competition,id_pays,nom_athlete,pren_athlete)
+VALUES (null,1,1,1,"RONALDO", "Jorge"),
+       (null,2,2,2,"DURANT","Paul"),
+       (null,3,3,3,"LEFEVRE","Thomas"),
+       (null,4,4,4,"SMITH","Tom");
+
+   #----------------------------------------#
+
+
+
+#----------------------------------------#
+#      CREATION DE LA TABLE SPORT        #
+#----------------------------------------#
+
+CREATE TABLE IF NOT EXISTS T_sport
+ (
+  id_sport    INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  libelle_sport   VARCHAR(50)
+ );
+
+
+ #--Insertion des données dans la table sport--#
+
+INSERT INTO t_sport(id_sport,libelle_sport)
+VALUES (null,"FOOTBALL"),
+       (null,"ATHLETISME"),
+       (null,"TENNIS"),
+       (null,"GOLF");
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#    CREATION DE LA TABLE COMPETITION    #
+#----------------------------------------#
+
+CREATE TABLE IF NOT EXISTS T_competition
+ (
+  id_competition    INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  libelle_competition   VARCHAR(50) NOT NULL
+ );
+
+ #--Insertion des données dans la table compétition--#
+
+INSERT INTO t_competition(id_competition, libelle_competition)
+VALUES (null,"Championnat du monde"),
+       (null,"Meeting de Zurich"),
+       (null,"Tournoi de Rolland Garros"),
+       (null,"Les Masters d'Augusta");
+
+#----------------------------------------#
+#        CREATION DE LA TABLE PAYS       #
+#----------------------------------------#
+
+CREATE TABLE IF NOT EXISTS T_pays
+ (
+  id_pays     INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  libelle_pays VARCHAR(25) NOT NULL
+ );
+
+
+#--Insertion des données dans la table pays--#
+
+INSERT INTO t_pays(id_pays,libelle_pays)
+VALUES (null,"BRESIL"),
+       (null,"SUISSE"),
+       (null,"FRANCE"),
+       (null,"ETATS-UNIS");
+
+#----------------------------------------#
+
+
+
+
+#----------------------------------------#
+#     CREATION DE LA VUE ATHLETES        #
+#----------------------------------------#
+
+CREATE VIEW V_ATHLETE(NOM, PRENOM, SPORT, COMPETITION, PAYS) AS
+SELECT nom_athlete, pren_athlete, libelle_sport, libelle_competition, libelle_pays
+FROM t_athlete, t_sport, t_competition, t_pays
+WHERE t_athlete.id_sport=t_sport.id_sport
+AND t_athlete.id_competition = t_competition.id_competition
+AND t_athlete.id_pays = t_pays.id_pays;
+
+
+#----------------------------------------#
+#       CREATION DE LA VUE PAYS          #
+#----------------------------------------#
+
+CREATE VIEW V_PAYS(PAYS) AS
+SELECT libelle_pays
+FROM t_pays;
+
+
+#----------------------------------------#
+#     CREATION DE LA VUE COMPETITION     #
+#----------------------------------------#
+
+CREATE VIEW V_COMPETITION(COMPETITION) AS
+SELECT libelle_competition
+FROM t_competition;
+
+
+#----------------------------------------#
+#        CREATION DE LA VUE SPORT        #
+#----------------------------------------#
+
+CREATE VIEW V_SPORT(SPORT) AS
+SELECT libelle_sport
+FROM t_sport;
+
+
+
+#----------------------------------------#
+#    CREATION DE LA VUE ATHLETE_PAYS     #
+#   PAR L'INTERMEDIAIRE D'AUTRES VUES    #
+#----------------------------------------#
+
+
+  # Création de la vue athlete_pays_id #
+  #------------------------------------# 
+
+CREATE VIEW V_ATHLETE_PAYS_ID (id_athlete, id_pays, nom, prenom) AS
+SELECT id_athlete, id_pays, nom_athlete, pren_athlete
+FROM t_athlete;
+
+  #      Création de la vue pays_id    #
+  #------------------------------------# 
+
+CREATE VIEW V_PAYS_ID (id_pays, pays) AS
+SELECT id_pays, libelle_pays
+FROM t_pays;
+
+ #   Création de la vue athlete_pays  #
+ #------------------------------------# 
+
+CREATE VIEW V_ATHLETE_PAYS (NOM, PRENOM,PAYS) AS
+SELECT nom,prenom, pays
+FROM v_athlete_pays_id, v_pays_id
+WHERE v_athlete_pays_id.id_pays = v_pays_id.id_pays;
+
+
+
+
+

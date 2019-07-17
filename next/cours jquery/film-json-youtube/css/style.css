@@ -1,0 +1,13 @@
+
+	.movie img {
+		float: left;
+	}
+
+	.movie {
+		clear: both;
+	}
+
+	#ytplayer {
+		position: fixed;
+		margin-top: 30px;
+	}

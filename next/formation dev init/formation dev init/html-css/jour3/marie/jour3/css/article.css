@@ -1,0 +1,103 @@
+body {
+    /*background: black;*/
+}
+article {
+    width: 640px;
+    height: 450px;
+    font-family: Arial,sans-serif;
+    /*background: #00ffff;*/
+    margin-left: auto;
+    margin-right: auto;
+    border-top:1px solid #d2d2d2;
+    border-bottom:1px solid #d2d2d2;
+}
+article img {
+    float: left;
+    margin: 20px;
+    border:1px solid #0f1813;
+}
+article .extrait {
+    float: right;
+    width: 400px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+article ul#fil_ariane {
+    -webkit-padding-start: 0px;
+    -moz-padding-start: 0px;
+    -o-padding-start: 0px;
+    padding-start: 0px;
+}
+article ul#fil_ariane li {
+    display: inline-block;
+}
+article ul#fil_ariane li a {
+    color: #f15257;
+    font-style: italic;
+    font-weight: 700;
+    text-decoration: none;
+}
+article ul#fil_ariane li:after {
+    content: " \\";
+    color: #f15257;
+    font-weight: 700;
+    
+}
+article ul#fil_ariane li:last-child:after {
+    content:none;
+} 
+
+article h1 {
+    font-size: 60px;
+    line-height: 44px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -1px;
+    margin:0;
+    color: #2b2424;
+}
+article p.info {
+    color:#2b2424;
+    font-size: 12px;
+    background: #e3f4fd;
+    border: 1px solid #c5e7f9;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding:5px;
+    display: inline-block;
+    margin: 10px 0 0 0;
+}
+article p.info a.date {
+    color: #2b2424;
+    text-decoration: none;
+}
+article p.info a.comments {
+    color: #902b0c;
+    font-weight: 700;
+    
+}
+article p, article a.more {
+    font-size: 14px;
+    font-style: italic;
+    color: #4b4848;
+}
+article p {
+    text-align: justify;
+    line-height: 16px;
+}
+article a.more {
+    float: right;
+    text-decoration: none;
+}
+article a.more:before {
+    content: "( ";
+}
+article a.more:after {
+    content: " )";
+}

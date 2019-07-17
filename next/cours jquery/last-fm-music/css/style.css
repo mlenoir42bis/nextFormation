@@ -1,0 +1,29 @@
+#img_ul {
+	list-style: none;
+}
+
+#img_ul a, #img_ul li > p {
+	display: block;
+	height: 126px;
+	line-height: 126px;
+	width: 126px;
+	overflow: hidden;
+	float: left;
+	background-color: #111;
+	text-align: center;
+}
+
+#img_ul li {
+	position: relative;
+	display: block;
+	float: left;
+	cursor: pointer;
+}
+
+#img_ul li > p {
+	margin: 0;
+	position: absolute;
+	opacity: 0.7;
+	background-color: #000;
+	bottom: 0;
+}

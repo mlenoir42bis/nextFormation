@@ -1,0 +1,40 @@
+* {
+    margin:0;
+}
+body {
+    /*background: black;*/
+}
+
+#container {
+    width: 960px;
+    background: yellow;
+    margin-left: auto;
+    margin-right: auto;
+}
+#container #header {
+    /*width: 960px;*/
+    height: 250px;
+    background: red;
+}
+#container #sidebar, #container #content {
+       height: 300px;
+}
+#container #sidebar {
+    width:300px;
+    padding:50px;
+    background: green;
+    float: left;
+    color: white;
+    
+    box-sizing: border-box;
+}
+#container #content {
+    width: 660px;
+    background: brown;
+    float:left;
+}
+#container #footer {
+    clear:both;
+    background: pink;
+    width:960px;
+}

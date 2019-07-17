@@ -1,0 +1,19 @@
+/*style*/
+
+body{
+	font-family:arial;
+	font-size:12px;
+	counter-reset: mon_compteur;
+}
+
+
+#wrapper{
+	width:83.3em;
+	margin:0 auto;
+	background-color: #CCCCCC;
+}
+
+#main p:before{
+	content: counter(mon_compteur) " ";
+	counter-increment: mon_compteur;
+}

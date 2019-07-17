@@ -1,0 +1,92 @@
+<!DOCTYPE HTML5>
+
+<html lang="fr">
+    
+<head>
+        <!--
+        
+        commentaire
+        
+        -->
+        <meta charset="utf-8" />
+        
+    <title>Les formulaires</title>    
+        
+        <!-- 
+        
+        insertion feuille css et js 
+        
+        -->
+</head>
+
+    <body>
+    
+        <h1>Les formulaires</h1>
+    
+        <form action ="" method="post">
+            
+            <input type="radio" name="civilité" value="Mme">femme
+            </br>
+            <input type="radio" name="civilité" value="M">homme
+            
+            </br>
+            </br>
+            
+            <label for="nom">votre nom :</label>
+            <input type="texte" name="nom" id="nom">
+            </br>
+            <label for="prenom">votre prenom :</label>
+            <input type="texte" name="prenom" id="prenom">
+            </br>
+            <label for="email">votre email :</label>
+            <input type="email" name="email" id="email">
+            
+            </br>
+            </br>
+            
+            <label for="etat-civil">Civilité :</label>
+            <select name="etat-civil" id="etat-civil">
+                <option value=""></option>
+                <option value="celibataire">Celibatire</option>
+                <option value="en couple">En couple</option>
+                <option value="marié">Marié</option>
+                <option value="veuf">Veuf</option>
+            </select>
+            
+            </br>
+            </br>
+            
+            <label for="passions">Vos passions</label>
+            <select multiple="" name="passion" id="passion">
+                <option value=""></option>
+                <option value="cinema">cineme</option>
+                <option selected value="sport">sport</option>
+                <option value="music">music</option>
+            </select>
+            
+            </br>
+            </br>
+            
+            <h3>Vos animaux</h3>
+            <input type="checkbox" name="animaux"> chat </br>
+            <input type="checkbox" name="animaux"> chien </br>
+            <input type="checkbox" name="animaux"> oiseau </br>
+            <input type="checkbox" name="animaux"> poisson </br>
+            
+            </br>
+            </br>
+            
+            <label for="a propos">A propos de vous</label>
+            <textarea name="a_propo" id="a_propo" rows="8" cols="50">
+            </textarea>
+            
+            </br>
+            </br>
+            
+            <input type="submit" value="La validation">
+        
+            
+        </form>
+    </body>
+
+</html>

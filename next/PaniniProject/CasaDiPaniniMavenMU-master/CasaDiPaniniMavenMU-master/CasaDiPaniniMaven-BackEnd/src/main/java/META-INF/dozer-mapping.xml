@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping map-id="produit_composer_lazy">
+		<class-a>com.apps.entity.ProduitComposer</class-a>
+		<class-b>com.apps.dto.ProduitDTO</class-b>
+		<field-exclude>
+            <a>ingredients</a>
+            <b>ingredients</b>
+        </field-exclude>
+	</mapping>
+	
+	<mapping map-id="menu_lazy">
+		<class-a>com.apps.entity.Menu</class-a>
+		<class-b>com.apps.dto.ProduitDTO</class-b>
+		<field-exclude>
+            <a>produits</a>
+            <b>produits</b>
+        </field-exclude>
+	</mapping>
+	
+	<mapping map-id="commande_lazy">
+		<class-a>com.apps.entity.Commande</class-a>
+		<class-b>com.apps.dto.CommandeDTO</class-b>
+		<field-exclude>
+            <a>ligneCommande</a>
+            <b>ligneCommande</b>
+        </field-exclude>
+	</mapping>
+	
+</mappings>

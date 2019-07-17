@@ -1,0 +1,130 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9 mars 2015, 15:26:45
+    Author     : stagiaire
+*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    background-color: #CCCCCC;
+}
+
+#wrapper{
+    width:90%;
+    margin:0 auto;
+    background-color: #FFFFFF;
+}
+
+.clearfix:after{
+    width:0px;
+    height:0px;
+    content:'.';
+    visibility: hidden;
+    display:block;
+    clear:both;
+}
+
+#logo{
+    float:left;
+    width:18%;
+}
+
+#logo img{
+    width:100%;
+}
+
+header{
+    margin-bottom:2%;
+}
+
+header nav{
+    float:left;
+    width:82%;
+    margin-top: 8%;
+}
+
+header nav ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    text-align:right;
+}
+
+header nav ul li{
+    display:inline-block;
+    margin-right:2%;
+    width:10%;
+    padding:1%;
+    background-color:#CCCCCC;
+    border-radius:5px;
+    text-align:center;
+}
+
+header nav ul li a{
+    text-decoration:none;
+    color: #FFFFFF;
+    font-weight:bold;
+}
+
+header nav ul li:hover a{
+    text-decoration:underline;
+}
+
+header nav ul li:hover{
+    background-color:#BBBBBB;
+    cursor:pointer;
+}
+
+#slider img{
+    width:100%;
+}
+
+#main{
+    box-sizing: border-box;
+    padding:2%;
+}
+
+article{
+    margin-bottom:2%;
+    border:1px solid black;
+    border-radius: 5px;
+}
+
+article img {
+    float:left;
+    display:block;
+    width:30%;
+    box-sizing: border-box;
+    padding:1%;
+}
+
+article .description{
+    float:left;
+    width:70%;
+    box-sizing:border-box;
+    padding: 0 2%;
+}
+
+
+article:nth-child(even) img, article:nth-child(even) .description{
+    float:right;
+}
+
+article h2{
+    margin:2% 0;
+}
+
+footer{
+    background-color: #000000;
+    padding:1%;
+}
+
+footer p{
+    text-align:center;
+    color: #FFFFFF;
+}

@@ -1,0 +1,2 @@
+http://localhost:8080/CasaDiPaniniMaven-Front/
+192.168.1.120

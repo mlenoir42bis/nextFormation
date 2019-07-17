@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 févr. 2015, 12:47:16
+    Author     : stagiaire
+*/
+
+#montre{
+    position:relative;
+    width:400px;
+    height:400px;
+    background-image: url('../img/montre.png');
+}
+
+#secondes, #minutes, #heures{
+    position:absolute;
+    top:0;
+    left:0;
+    width:400px;
+    height:400px;
+}
+
+#secondes{
+    background-image: url('../img/secondes.png');
+}
+
+#minutes{
+    background-image: url('../img/minutes.png');
+}
+
+#heures{
+    background-image: url('../img/heures.png');
+}

@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@gmail.com
+    DocumentRoot "C:/xampp/htdocs/lddt/web"
+    ServerName lddt.com
+    
+	<directory "C:/xampp/htdocs/lddt/web">
+	AllowOverride None
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^(.*)$ app_dev.php [QSA,L]
+	</directory>
+
+    ErrorLog "logs/lddt.log"
+    CustomLog "logs/lddt.log" common
+</VirtualHost>

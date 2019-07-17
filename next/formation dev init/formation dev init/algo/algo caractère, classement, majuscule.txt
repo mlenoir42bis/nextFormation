@@ -1,0 +1,53 @@
+programme: chaine de caractére et mise en majuscule
+//-------------------------------------------
+variable:
+tab = tableau [1..20] chaine[20]
+long_ch,j,i :entier
+val :chaine[20]
+
+//-------------------------------------------
+function compar(c1, c2 : chaine) boolean
+
+	if c1 < c2 alors
+		retourne (vrai)
+	sinon 
+		retourne (faux)
+
+function invers(i1, i2: chaine)
+	
+	tmp = i1
+	i1 = i2
+	i2 = tmp
+
+//-------------------------------------------
+//saisi
+pour i:=1 a 20 faire
+//debut
+ecrire (donner un caractère a stocker)
+lire(tab[1,i])
+	//-----------------
+	//mise en majuscule	
+	long_ch = length(tab[1,i]]
+	pour j:=1 to long_ch faire
+	//debut
+		tab[1,j] = upcase tab[1,j]
+	//fin
+//fin
+//-------------------------------------------
+//classement	
+pour i:=1 a 20 faire
+//debut
+	//--------------------
+	pour j:=i+1 a 20 faire
+	//debut
+	si compar(tab[1,i], tab[1,j]) = vrai faire
+	invers(tab[1,i], tab[1,j])
+	//fin	
+//fin
+
+//-------------------------------------------
+//affichage
+pour i:=1 to 20 faire
+//debut
+	ecrire(tab[1,i])
+//fin

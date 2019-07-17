@@ -1,0 +1,10 @@
+th, tr, td{
+    border: black solid 2px;
+}
+
+table{
+    text-align: center;
+    border-collapse: collapse;
+    margin: 0 auto;
+    padding: 0 auto;
+}       

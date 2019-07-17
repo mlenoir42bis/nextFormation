@@ -1,0 +1,232 @@
+/*
+**********************
+6 = DIVERS
+**********************
+*/
+/*F*/
+.container_24 {
+	margin-top: 10px;
+}
+/*E*/
+p {
+	font-size: 13px;
+	line-height: 20px;
+	color: #353535;
+}
+
+/*G*/
+
+	/*// positionnement phase 2*/
+/*Les éléments positionnés en absolute au sein des blockquote le seront non par rapport à la fenetre , mais pas rapport au blockquote parent*/
+blockquote {
+	position: relative;
+} 
+blockquote, blockquote p {
+	font-size: 15px;
+	line-height: 20px;
+	font-style: italic;
+	color: #0e0e0e;
+
+}
+	/*// positionnement phase 2*/
+.main blockquote p {
+	padding-left: 30px;
+}
+
+.main blockquote p:first-child:before, 
+.main blockquote p:last-child:after {
+	font-size: 40px;
+	color: #bfbfbf;
+}
+/*chercher pretty quotes dans Google pour récupérer le un exemple de quotes plus joli*/
+.main blockquote p:first-child:before {
+	content: '“';
+		/*// positionnement phase 2*/
+	/*Positionné par rapport au blocquote parent qui est positionné en relative*/
+	position: absolute;
+	top:7px;
+	left: 0;
+}
+
+.main blockquote p:last-child:after {
+	content: '”';
+
+	/*// positionnement phase 2*/
+	float: right;
+	position: absolute;
+	bottom: -7px;
+	right: 0;
+}
+
+/*D*/
+h1,h2 {
+	letter-spacing: -1px;
+}
+
+h3 {
+	font-size: 26px;
+	text-transform: lowercase;
+	border-bottom: 1px solid #d1d1d1;
+	padding-bottom: 24px;
+	margin-bottom: 15px;
+	/*PHASE 2 => permet d'aligner le titre et les blocquotes*/
+	line-height: 1em;
+}
+
+/*A*/
+a {
+	color:#7E7E7E;
+	text-decoration: none;
+}
+
+a:hover, .selected  {
+	color:black;
+
+}
+
+/*B*/
+li {
+	margin-left: 24px;
+}
+
+/*c*/
+.button {
+	background: #242324;
+	padding:6px;
+	color:white;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+.button:hover {
+	background: black;
+	color:white;
+}
+/*
+**********************
+1 = HEADER
+**********************
+*/
+header {
+	overflow: hidden;
+}
+
+header h1 {
+	
+	/* indente le texte sur la gauche. Il est présent mais non visible.*/
+	text-indent: -9999px;
+	/*grâce à clearfix on a un block donc on peut faire un float*/
+	float: left;
+	margin-bottom: 0;
+
+	
+
+}
+
+/*Le background doit être placé sur le lien pour que l'image soit cliquable, car le text est indenté et le lien ne fonctionne pas sinon*/
+header h1 a {
+	background: url('../images/logo.png') no-repeat;
+	width: 174px;
+	height: 23px;
+	float:left;
+	margin: 10px 10px 22px;
+}
+
+/*
+**********************
+2 = NAVIGATION
+**********************
+*/
+nav {
+	float:right;
+	padding-top: 12px;
+}
+nav li {
+	display: inline;
+}
+
+nav a {
+	text-transform: lowercase;
+}
+
+/*
+**********************
+3 = BANNER
+**********************
+*/
+
+.banner {
+	background: url('../images/city-bkg.jpg') no-repeat;
+	width: 695px;
+	height: 231px;
+	clear:both;
+	/*Les éléments dans la banner en absolute le seront par rapport à la banner parente en relative.*/
+	position: relative;
+}
+
+.banner h2 {
+	color: white;
+	font-size: 28px;
+	width: 400px;
+	font-weight: normal;
+
+	position: absolute;
+	bottom: -10px;
+	padding: 0 8px;
+	left: 8px;
+	/*red green blue alpha*/
+	background: rgba(0,0,0,.5);
+}
+
+.callout {
+	background: black;
+	height: 231px;
+}
+/*
+**********************
+4 = MAIN
+**********************
+*/
+.main {
+	margin-top: 20px;
+}
+
+/*
+**********************
+5 = FOOTER
+**********************
+*/
+footer {
+	clear:both;
+	border-top:1px solid #d1d1d1;
+	padding-top: 18px;
+	margin-top: 30px;
+}
+
+
+/*
+**********************
+7 = WORK.html
+**********************
+*/
+.work h2,
+.work h4 {
+	font-weight: normal;
+
+}
+
+.work h2 {
+	font-size: 26px;
+	margin-bottom: 0;
+
+}
+.work img {
+	margin-bottom: 20px;
+}
+.work h4 {
+	color: #787878;
+	font-size: 26px;
+	line-height: 1.2em;
+	border-bottom: 1px solid #1d1d1d;
+	padding-bottom: 33px;
+	margin-bottom: 30px;
+}

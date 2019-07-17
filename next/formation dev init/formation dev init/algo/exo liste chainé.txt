@@ -1,0 +1,170 @@
+exo 1 :
+cree une liste chainé composé de deux éléments de type chaine de caractère
+
+exo2 :
+cree une liste chainé composé de plusieurs type chaine de caractère
+
+exo3:
+cree une liste chainé contenant un nombre indeterminer d'element
+
+exo4:
+afficher les element d'une liste chainé
+
+exo5:
+cree un programme qui recherche une valeur dans une liste chainé
+
+exo6:
+cree un programme qui suprime le premier element d'une liste chainé
+
+exo7:
+suprimer d'une liste chaine un élément portant une valeur donné
+--------------------------------------------------------------------------------------------------------------------------
+
+exo1:
+//Algorithme CréationListe2Elements
+//declaration des Types:
+Type Liste = ^Element
+Type Element = Structure
+		Info : chaîne de caractères
+		Suivant : Liste
+	       Fin structure
+
+//declaration des variable
+Tete, P : Liste
+NombreElt : entier
+
+//DEBUT
+	Tete := Nil 		/* pour l'instant la liste est vide*/
+	Allouer(P) 		/* réserve un espace mémoire pour le premier élément */
+	Lire(P^.Info) 		/* stocke dans l'Info de l'élément pointé par P la valeur saisie */
+	P^.Suivant := Nil 	/* il n'y a pas d'élément suivant */
+	Tete := P 		/* le pointeur Tete pointe maintenant sur P*/
+
+/* ajout du 2e élément, ce qui revient à insérer un élément en tête de liste */
+
+	Allouer(P) 		/* réserve un espace mémoire pour le second élément */
+	Lire(P^.Info) 		/* stocke dans l'Info de l'élément pointé par P la valeur saisie */
+	P^.Suivant := Tete 	/* élément inséré en tête de liste */
+	Tete := P
+//fin
+
+--------------------------------------------------------------------------------------------------------------------------
+exo4:
+
+programme affichage liste chainé;
+type 
+liste : ^element
+element : structrure
+	info: chaine
+	suivant: liste
+
+var
+tete, p : liste
+
+//debut
+p := tete
+
+	Repeter
+	//debut
+		Ecrire (p^.suivant)
+		Ecrire (p^.info)
+		p := p^suivant
+	tant que p^.suivant <> NIL
+	//fin
+//fin
+ 
+
+--------------------------------------------------------------------------------------------------------------------------
+exo5:
+
+programme recherche dans une liste chainé;
+type 
+liste : ^element
+element : structrure
+	info: chaine
+	suivant: liste
+
+var
+tete, p : liste
+valeur_trouver : bool
+valeur_rechercher : variant
+
+//debut
+si tete <> nil alors
+	p := tete
+	valeur_trouver = faux
+	
+	ecrire(donner la valeur a rechercher)
+	lire(valeur_rechercher)
+
+		tant que p^.suivant <> NIL et valeur_trouver = faux faire
+		//debut 
+			si p^info = valeur_rechercher alors
+				valeur_trouver = vrai
+				ecrire (la valeur rechercher est contenu dans la structure :)
+				Ecrire (p^.suivant)
+			sinon
+			p := p^suivant
+		//fin
+
+	si valeur_trouver = faux alors
+	ecrire (la valeur n'est pas contenu dans cette liste)
+	//fin si
+sinon
+ecrire (la liste est vide)
+//fin
+
+
+--------------------------------------------------------------------------------------------------------------------------
+exo7:
+
+Programme:
+
+type 
+liste : ^element
+element : structrure
+	info: chaine
+	suivant: liste
+
+var
+tete, p, prec : liste
+valeur_trouver : bool
+valeur_rechercher : variant
+
+
+//debut
+si tete <> nil alors //si la liste n'est pas null
+	p := tete
+	valeur_trouver = faux
+	
+	ecrire(donner la valeur a rechercher)
+	lire(valeur_rechercher)
+
+	si tete^info = valeur_rechercher alors
+	tete := tete^suivant
+	desallouer(p)
+	sinon
+		tant que p^.suivant <> NIL et valeur_trouver = faux faire
+		//debut 
+			
+				si p^info = valeur_rechercher alors
+					valeur_trouver = vrai
+					ecrire (la valeur rechercher est contenu dans la structure :)
+					Ecrire (p^.suivant)
+					
+				sinon
+				prec := p
+				p^ := p^.suivant
+		//fin
+
+		si valeur_trouver = vrai alors
+			prec^suivant := p^suivant
+			desallouer(p)
+		sinon
+		ecrire (la valeur n'est pas contenu dans cette liste)
+		//fin si
+	//fin si
+
+sinon
+ecrire (la liste est vide)
+//fin

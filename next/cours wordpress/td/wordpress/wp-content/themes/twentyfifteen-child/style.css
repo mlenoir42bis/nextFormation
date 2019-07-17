@@ -1,0 +1,55 @@
+/*
+Theme Name:     Twenty Fifteen Child
+Theme URI:      http://fab.com/theme
+Description:    Mon super thème
+Author:         Fab
+Author URI:     http://fab.com
+Template:       twentyfifteen                       
+Version:        0.1.0
+*/
+
+@import url("../twentyfifteen/style.css");
+
+
+
+.mycolumn{
+	width:30%;
+	float:left;
+	margin-right:5px;
+}
+
+.mycolumn ul{
+	list-style-type:none;
+}
+
+.mycolumn h2, .mycolumn ul li a{
+	color:#FFFFFF;
+}
+
+.site-footer{
+	width:100%;
+	margin:0;
+	position:relative;
+	background-color: #000;
+}
+
+
+.custom h2{
+	text-align:left;
+}
+
+.custom input[type=text]{
+	height: 20px;
+    padding: 0;
+    vertical-align: middle;
+    width: 68%;
+	font-size:12px;
+}
+
+.custom input[type=submit]{
+	box-sizing: border-box;
+    font-size: 10px;
+    height: 23px;
+    margin-left: 5px;
+    padding: 4px;
+}

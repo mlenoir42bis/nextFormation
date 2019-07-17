@@ -1,0 +1,39 @@
+body {
+    background: black;
+    width: 100%;
+}
+
+#container {
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+}
+
+#container #header {
+    background: green;
+    height: 100px;
+}
+
+#container #sidebar, #container #content {
+    height: 300px;
+}
+#container #sidebar {
+    float: left;
+    width: 300px;
+    background: yellow;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+#container #content {
+    float: right;
+    width: 600px;
+    background: red;
+}
+
+#footer {
+    clear: both; /* annule le comportement de float*/
+    text-align: center;
+    background: white;
+}

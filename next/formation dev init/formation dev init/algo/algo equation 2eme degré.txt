@@ -1,0 +1,42 @@
+resolution d'une equaton du deuxieme degré:
+equation: ax² +bx + c = 0
+
+programme equation:
+
+Variable 
+
+a,b,c,x : int
+
+Delta : réel 
+
+result : réel
+
+debut:
+	ecrire ("Donner les valeur de a, b et c de votre equation:"
+	
+	lire a,b,c
+	
+	//calcul du delta
+	delta <- b² - 4ac
+
+	
+si delta = 0 alors
+	
+	x= -b/2a
+
+	result = x
+
+si delta > 0 alors
+
+	x1 = -b - racine(delta)
+
+	x2 = -b + racine(delta)	
+
+	result = x1 et x2 
+
+sinom 
+
+result = ( "Aucun résultat dans réel  pour cette equation" )
+
+
+ecrire result

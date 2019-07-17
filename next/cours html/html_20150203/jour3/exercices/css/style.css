@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 4 févr. 2015, 09:54:27
+    Author     : stagiaire
+*/
+
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+
+@font-face {
+    font-family: 'fab_font_regular';
+    src: url('../fonts/star_trek_future-webfont.eot');
+    src: url('../fonts/star_trek_future-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/star_trek_future-webfont.woff2') format('woff2'),
+         url('../fonts/star_trek_future-webfont.woff') format('woff'),
+         url('../fonts/star_trek_future-webfont.ttf') format('truetype'),
+         url('../fonts/star_trek_future-webfont.svg#star_trek_future_regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'fab_font_italic';
+    src: url('../fonts/star_trek_enterprise_future-webfont.eot');
+    src: url('../fonts/star_trek_enterprise_future-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/star_trek_enterprise_future-webfont.woff2') format('woff2'),
+         url('../fonts/star_trek_enterprise_future-webfont.woff') format('woff'),
+         url('../fonts/star_trek_enterprise_future-webfont.ttf') format('truetype'),
+         url('../fonts/star_trek_enterprise_future-webfont.svg#star_trek_enterprise_futureIt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+#div1 h1{
+    color: red;
+    font-size:22px;
+    font-weight:bold;
+    font-family:arial;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#div1 {
+    width:150px;
+    height:150px;
+    background-color: cornflowerblue;
+    box-shadow: 4px 4px #000000;
+}
+
+#div2{
+    border-radius:5px;
+    width:150px;
+    height: 150px;
+    background-color: rgba(100,149,237,0.5);
+}
+
+#div3{
+    width:150px;
+    height: 150px;
+    background: linear-gradient(to bottom, white, black);
+}
+
+#div4{
+    width:150px;
+    height: 50px;
+    /*background: linear-gradient(45deg, white, black);*/
+    background: linear-gradient(to bottom, #FF1010 0%, #FF1010 49%, #FFB7B7 100%);
+    border-radius:5px;
+    border:1px solid #FF0101;
+}
+
+.yop{
+    font-family: 'Rock Salt', cursive;
+    font-size:20px;
+}
+
+.yip{
+    font-family: 'fab_font_regular';
+    font-size:60px;
+    font-style:italic;
+}
+
+#div5, #div6, #div7 {
+    width:150px;
+    height:150px;
+    background-color: skyblue;
+}
+
+#div6, #div7{
+    border:2px solid red;
+    padding:10px;
+}
+
+#div7{
+    box-sizing: border-box;
+    transition:1s;
+}
+
+#div7:hover{
+    /*transform:rotate(90deg);*/
+    width:300px;
+    opacity:0;
+    transition:1s;
+}
+
+@keyframes mon_anim{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+@-webkit-keyframes mon_anim{
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
+
+#div5{
+    animation-name: mon_anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: mon_anim;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.clic{
+   opacity:0;
+   transition:1s;
+}
+
+#div2:hover .clic{
+    opacity:1;
+    transition:1s;
+}

@@ -1,0 +1,51 @@
+﻿#----------------------------------------#
+#     CREATION DE LA BASE DE DONNEES     #
+#----------------------------------------#
+
+CREATE DATABASE IF NOT EXISTS DB_BIBLIOTHEQUE;
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#     INDIQUER LA BASE SUR LAQUELLE      #
+#        S'EFFECTUE LA CREATION          #
+#----------------------------------------#
+
+USE DB_BIBLIOTHEQUE;
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#   CREATION DE LA TABLE LIVRES          #
+#----------------------------------------#
+
+
+CREATE TABLE IF NOT EXISTS T_livre
+ (
+  id_livre	INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  titre    	VARCHAR(50) NOT NULL,
+  date_parution DATE,
+  nbPages	INT
+);
+
+CREATE TABLE IF NOT EXISTS T_auteur
+(
+ id_auteur	INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+ nom_auteur	VARCHAR(50) NOT NULL,
+ prenom_auteur	VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS T_genre
+(
+ id_genre	INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+ nom_genre	VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS T_edition
+(
+ id_edition	INT PRIMARY KEY NOT NULL, AUTO_INCREMENT,
+ nom_edition	INT PRIMARY KEY NOT NULL
+);
+  

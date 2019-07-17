@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--google map api-->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <!-- jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- jquery mobile-->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+        <!-- nos scripts-->
+        <script src="js/tracker.js"></script>
+        <script src="js/voir.js"></script>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+
+        <div data-role="page" id="accueil">
+            <div data-role="header">
+                <h2>Tracker</h2>
+            </div>
+
+            <div data-role="main"  class="ui-content">
+                <a href="#" id="add_link" class="ui-btn-b ui-shadow ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-location">Track me !</a>               
+                <a href="#" id="delete_link" class="ui-btn-b ui-shadow ui-btn ui-btn-inline ui-corner-all ui-btn-icon-left ui-icon-refresh">Reinit</a>               
+                <div id="loading"><img src="img/loading.gif" />Working...</div>
+                <div id="message"></div>
+            </div>
+
+            <div data-role="footer" data-theme="a" data-id="mon_footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#" data-icon="grid" class="ui-btn-active ui-state-persist">Accueil</a></li>
+                        <li><a href="#voir" data-transition="slide" data-icon="star" >Voir</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+
+        </div>
+
+        <div data-role="page" id="voir">
+            <div data-role="header">
+                <h2>Tracker</h2>
+            </div>
+
+            <div data-role="main"  class="ui-content">
+                <div id="ma_carte"></div>
+            </div>
+
+            <div data-role="footer" data-theme="a" data-id="mon_footer" data-position="fixed">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#accueil" data-transition="slide" data-direction="reverse" data-icon="grid" >Accueil</a></li>
+                        <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="star" >Voir</a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div>
+
+        </div>
+        
+        
+    </body>
+</html>

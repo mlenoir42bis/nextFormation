@@ -1,0 +1,245 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+body{
+    width: 100%;
+}
+
+h1, h2{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+input{
+    margin-bottom: 10px;
+}
+
+.clearfix {
+        content:".";
+	height:0;
+	line-height:0;
+	display:block;
+	visibility:hidden;
+	clear:both;
+}
+
+#wrapper{
+    width: 1023px;
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*Page login registration*/
+.form-login{
+    margin-top: 100px;
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    font-weight: bold;
+    color: black;
+}
+
+.form-login label{
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+.form-login input{
+    margin-top: 10px;
+}
+
+.form-login legend{
+    text-align: center;  
+}
+
+#getRegister{
+    float: right;
+    margin-right: 250px;
+    text-decoration: underline;
+}
+
+/********CREATE*******/
+#content{
+    margin-top: 100px;
+}
+
+#generateSurvey{
+    margin-top: 25px;
+}
+
+#generateSurvey legend{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 25px;    
+}
+
+#generateSurvey label{
+    margin-left: 270px;
+    margin-bottom: 10px;
+}
+
+#generateSurvey input{
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#generateSurvey textarea{
+    margin-left: 245px; 
+}
+
+#generateSurvey input.btn{
+    width: 150px;
+}
+
+#contentType{
+    width: 200px;
+    text-align: center;
+    float: left;
+}
+
+#contentType p{
+    margin-bottom: 15px;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: white;
+    border-radius: 3px;
+}
+
+#contentType h3{
+    margin-bottom: 15px;
+}
+
+#contentQuestion .question{
+    float: right;
+    width: 600px;
+    margin-right: 100px;
+}
+
+#contentQuestion .qcm{
+    width: 400px;
+    margin-left: 85px;
+}
+
+#contentQuestion img, #survey img{
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+}
+
+.remove{
+    float: right;
+    margin-right: 25px; 
+}
+
+.removeQuestion{
+    margin-top: -20px;
+    right: 202px;
+    position: absolute;
+}
+
+.help-block{
+    text-align: center;
+}
+
+/*home*/
+
+/*sidebar*/
+#sidebar{
+    right: 0;
+    float: right;
+    width: 20%;
+}
+
+#sidebar h2{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.mysurvey{
+    padding: 15px;
+    height: 50px;
+    overflow: hidden;
+    margin-top: 25px;
+    border: black solid 2px;
+}
+
+/* home title and description*/
+#homeContent{
+    float: left;
+    width: 80%;
+}
+
+#surveyInfo{
+    border-right: black solid 2px;
+    float: left;
+    width: 75%;
+}
+
+#surveyInfo h2{
+    text-align: center;
+}
+
+#surveyConsol{
+    float: right;
+}
+
+#surveyConsol p{
+    float: right;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+#surveyConsol p:last-child{
+    margin-right: 25px;
+}
+
+/*home content survey*/
+#survey{
+    margin-top: 25px;
+}
+
+#survey p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#survey .question{
+    padding: 15px;
+    margin-top: 25px;
+}
+
+#survey .question:last-child{
+    border: none;
+}
+
+#survey .answer{
+    margin-left: 50px;
+    margin-bottom: 25px;
+}
+
+
+#survey .remove{
+    float: right;
+    margin-right: 160px; 
+}
+
+#survey .removeQuestion{
+    margin-top: -20px;
+    right: 310px;
+    position: absolute;
+}
+
+#survey .qcm{
+    margin-left: 200px;
+    width: 400px;
+}

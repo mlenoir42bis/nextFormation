@@ -1,0 +1,17 @@
+programme: calcul du carré
+var:
+val: integer
+
+fonction carre (x : integer) integer
+result: integer
+//debut
+	result= x*x
+
+	return result
+//fin
+
+//debut
+	ecrire(donner un nombre a metre au carre)
+	lire (val)
+	ecrire(carre(val))
+//fin

@@ -1,0 +1,8 @@
+//TP paint canvas
+- finir le paint
+- ajout d'une gestion de la taille du trait
+- ajout d'une gestion de la forme (carre, rond)
+- ajout d'une gestion du fond d'ecran (2/3 fonds d'ecran)
+- bouton effacer le dessin
+- on conserve les parametres soit localstorage, soit cookie
+- bouton pour effacer les parametres enregistrés

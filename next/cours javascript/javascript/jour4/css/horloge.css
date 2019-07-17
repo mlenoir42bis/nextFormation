@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 févr. 2015, 12:47:16
+    Author     : stagiaire
+*/
+
+@font-face {
+    font-family: 'led_display7regular';
+    src: url('../fonts/led_display-7-webfont.eot');
+    src: url('../fonts/led_display-7-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/led_display-7-webfont.woff2') format('woff2'),
+         url('../fonts/led_display-7-webfont.woff') format('woff'),
+         url('../fonts/led_display-7-webfont.ttf') format('truetype'),
+         url('../fonts/led_display-7-webfont.svg#led_display7regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+#horloge{
+    background-color: #000000;
+    border-radius:5px;
+    width: 250px;
+    padding:10px;
+}
+
+#horloge p{
+    font-family: 'led_display7regular';
+    font-size:40px;
+    color: green;
+    font-weight:bold;
+}
+
+#montre{
+    position:relative;
+}
+
+#secondes{
+    position:absolute;
+    top:0;
+    left:0;
+    background-image: url('../img/secondes.png');
+    width:400px;
+    height:400px;
+}

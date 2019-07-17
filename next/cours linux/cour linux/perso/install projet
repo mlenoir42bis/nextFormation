@@ -1,0 +1,65 @@
+mise en place d'un projet web 
+
+1)creation de l'host ->fichier de conf hosts
+ajouter -> 127.0.0.1	projet1.com
+
+2)creation du repertoire du projet
+sudo mkdir /var/www/vhosts/projet1
+
+3)creation du virtualhost
+3.1)cree fichier projet1.conf dans /etc/apache2/sites-available/
+3.2)editer modifier par:
+<VirtualHost *:80>
+	ServerAdmin votre-mail@monsite1.fr
+	ServerName monsite1.fr
+	ServerAlias www.monsite1.fr
+	
+	DocumentRoot /var/www/monsite1
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/monsite1>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog /var/log/apache2/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog /var/log/apache2/access.log combined
+
+    Alias /doc/ "/usr/share/doc/"
+    <Directory "/usr/share/doc/">
+        Options Indexes MultiViews FollowSymLinks
+        AllowOverride None
+        Order deny,allow
+        Deny from all
+        Allow from 127.0.0.0/255.0.0.0 ::1/128
+    </Directory>
+
+</VirtualHost>
+
+
+4)
+sudo a2ensite projet1.conf
+5)
+sudo /etc/init.d/apache2 reload
+
+//sudo a2dissite nomhost.conf: Apache2 Disable Site 
+//sudo a2ensite nomhost.conf: Apache2 Enable Site 
+
+//nom de premiere page traiter dans : /etc/apache2/conf-available/charset.conf

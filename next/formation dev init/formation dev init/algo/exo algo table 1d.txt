@@ -1,0 +1,121 @@
+exercice 1:
+
+saisie et affichage des éléments d'un tableau.
+
+exercice 2:
+
+calculer la somme et la moyenne d'un tableau.
+
+exercice 3:
+
+rehcerche du plus grand element d'un tableau.
+
+exercie 4:
+
+trier paar ordre croissant puis décroissant d'un tableau.
+
+
+exercice 5 :
+
+calculer la somme et le produit de deux tableaux.
+
+---------------------------------------------------
+
+exo1:
+
+var tab1= tableau[1..10]
+
+	for 1 to 10 do
+	ecrire ("saisir donner a integrer au tableau")
+	lire( tab[1..donne])
+	//fin
+
+	for 1 to 10 do
+	ecrire (tab1[1..donne])
+	//fin
+//fin 
+---------------------------------------------------
+exo2:
+
+var tab1= tableau[1..10]
+var somme, moyenne: int
+
+	for 1 to 10 do
+	somme = somme + tab1[n]
+	//fin
+
+moyenne = somme/10
+ecrire ("la moyenne est egale a :") moyenne
+
+//fin
+---------------------------------------------------
+exo3:
+
+var tab1 = tableau[1..10]
+temp, result : int
+
+	//debut saisie
+	for n:=1 to 10 do
+	ecrire ("saisir donner a integrer au tableau")
+	lire( tab1[n])
+	//fin
+
+	temp= tab1(1)
+	
+	//debut recherche plgrand
+	for n:=2 to 10 do
+		if temp < tab1[n]
+		temp = tab1[n]
+		else 
+		next
+	//fin
+
+temp = result
+
+ecrire result
+//fin
+
+---------------------------------------------------
+exo4:
+
+var tab1= tableau[1..10]int
+m,n,permut, int
+
+	for n=:1 to 10
+	ecrire ("donner a classer")
+	lire( tab1[n])
+	//fin
+
+for m=:1 to 10
+	for n=:m+1 to 10
+		
+	if tab1[m] < tab1[n] then 
+	permut= tab1[n]
+	tab1[n] = tab1[m]
+	tab1[m] = permut
+	//fin
+	
+for m a 10 faire
+ecrire tab1(m)
+//fin				
+
+---------------------------------------------------
+exo5:
+
+
+var tab1= tableau[1..10]int
+var tab2= tableau[1..10]int
+var tab3= tableau[1..10]int
+var tab4= tableau[1..10]int
+
+
+for n:1 to 10 do
+
+tab3[n] = tab1[n] + tab2[n]
+
+tab4[n] = tab1[n] * tab2[n]
+//fin
+
+for n:=1 to 10 do
+ecrire tab3[n]
+ecrire tab4[n]

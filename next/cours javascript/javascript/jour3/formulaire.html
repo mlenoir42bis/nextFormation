@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formulaire</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/formulaire.css" />
+        <script src="js/formulaire.js"></script>
+    </head>
+    <body>
+        <h1>Formulaire</h1>
+
+        
+        
+        <form>
+            
+            <div id="message">
+            </div>
+            
+            <div class="formField">
+                <label>Nom</label><input type="text" name="nom" />
+            </div>
+
+            <div class="formField">
+                <label>Prénom</label><input type="text" name="prenom" />
+            </div>
+
+
+            <div class="formField vertical">
+                <label>Adresse</label><textarea name="adresse" ></textarea>
+            </div>
+            
+            <div class="formField">
+                <label>CP</label><input type="text" name="cp" />
+            </div>
+            
+            <div class="formField">
+                <label>Ville</label><input type="text" name="ville" />
+            </div>
+            
+            <div class="formField">
+                <input type="radio" name="sexe" value="homme" /><label>homme</label>
+                <input type="radio" name="sexe" value="femme" /><label>femme</label>
+                <input type="radio" name="sexe" value="autre" /><label>autre</label>
+                <input type="text" name="sexe_autre" />
+            </div>
+            
+            <input type="submit" value="Go" />
+            
+            <!--todo radio button custom-->
+            <!--todo champ qui depend d'un autre champ-->
+        </form>
+
+
+    </body>
+</html>

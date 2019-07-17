@@ -1,0 +1,64 @@
+//apache2
+sudo apt-get install apache2
+fichier de conf => /etc/apache2/apache2.conf
+
+creer un répertoire vhosts dans /var/www/vhosts
+enable vhost_alias.load => sudo a2enmod vhost_alias
+desactiver le module autoindex =>sudo a2dismod autoindex
+
+ajouter ces lignes dans le fichier apache2.conf
+/*
+ServerName localhost
+
+#mass virtual hostings
+UseCanonicalName Off
+
+VirtualDocumentRoot /var/www/vhosts/%0
+
+<Directory "/var/www/vhosts/">
+    Options Indexes FollowSymLinks Includes ExecCGI
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+</Directory>
+*/
+editer le fichier /etc/apache2/sites-available/default
+Modifier l'email du serveradmin, et docroot :
+DocumentRoot /var/www/vhosts/
+
+redemarrer apache
+sudo /etc/init.d/apache2 restart
+ou
+service apache2 restart
+
+Si un message du style Could not determine domain name for ServerName 
+modifier le fichier host: 
+127.0.0.1	localhost.localdomain localhost
+
+
+//mysql
+sudo apt-get install mysql-server
+Saisir un mot de passe pour root
+
+//php
+sudo apt-get install php5 php5-mysql php5-gd
+fichier de conf => /etc/php5/apache2/php.ini
+
+//decommenter ces lignes dans le php.ini
+; display_errors
+   Default Value: On
+   Development Value: On
+   Production Value: Off
+
+; error_reporting
+   Default Value: E_ALL & ~E_NOTICE
+   Development Value: E_ALL | E_STRICT
+   Production Value: E_ALL & ~E_DEPRECATED
+
+
+//phpmyadmin
+donwloader les sources de phpmyadmin
+dezip dans /var/www/vhost/phpmyadmin.nom_de_domaine
+sudo cp config.sample.inc.php config.inc.php
+Si probleme avec mysqli, mettre mysql dans extension dans le fichier de conf
+

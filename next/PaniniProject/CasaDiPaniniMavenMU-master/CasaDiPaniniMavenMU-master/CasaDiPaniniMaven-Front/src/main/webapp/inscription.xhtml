@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Validation</title>
+</h:head>
+<h:body>
+
+	<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+		<ui:define name="content">
+
+			<div class="container">
+				<div class="row">
+
+					<h:form>
+						<p:panel header="Validate">
+							<p:messages />
+							<h:panelGrid columns="4" cellpadding="5">
+
+								<h:outputLabel for="nom" value="Nom " />
+								<p:inputText id="nom"
+									value="#{actionClientBean.clientDTO.nomClient}" label="nom" />
+								<p:message for="nom" />
+								<h:outputText value="#{actionClientBean.clientDTO.emailClient}" />
+
+								<h:outputLabel for="prenom" value="Prenom" />
+								<p:inputText id="prenom"
+									value="#{actionClientBean.clientDTO.prenomClient}"
+									label="prenom" />
+								<p:message for="prenom" />
+								<h:outputText value="#{actionClientBean.clientDTO.emailClient}" />
+
+								<h:outputLabel for="email" value="e-Mail" />
+								<p:inputText id="email"
+									value="#{actionClientBean.clientDTO.emailClient}" label="email" />
+								<p:message for="email" />
+								<h:outputText value="#{actionClientBean.clientDTO.emailClient}" />
+
+								<h:outputLabel for="pwd1" value="Password " />
+								<p:password id="pwd1"
+									value="#{actionClientBean.clientDTO.password}" required="true" />
+
+								<p:commandButton value="Envoyer"
+									action="#{actionClientBean.creerClient}" ajax="false"
+									icon="ui-icon-check" validateClient="true" />
+							</h:panelGrid>
+						</p:panel>
+					</h:form>
+
+				</div>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

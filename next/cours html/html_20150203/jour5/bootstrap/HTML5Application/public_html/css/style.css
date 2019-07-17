@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 6 févr. 2015, 15:31:48
+    Author     : stagiaire
+*/
+
+.blue{
+    background-color: #64b5d3;
+}
+
+.blue img{
+    width:100%;
+}
+
+.grey{
+    background-color: #EEEEEE;
+}
+
+img[class=img-circle]{
+    max-width:50%;
+}
+
+.no_padding{
+    padding:0;
+}
+
+.navbar-default {
+    border:none;
+    background-color:#FFFFFF;
+}
+
+.navbar-default .navbar-nav > li > a{
+    color: #424242;
+}
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: #64b5d3;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus{
+    background-color:#64b5d3;
+    color: #FFFFFF;
+}
+
+.dropdown-menu > li > a:hover{
+    background-color:rgba(100,181,211,0.5);
+    color:#FFFFFF;
+}
+
+.bandeau_gris{
+    height:7.15em;
+    margin-bottom:5px;
+    background-color: #f4f0ef;
+}
+
+.bandeau_gris+hr{
+    margin-bottom: 40px;
+}
+
+.bandeau_gris_left{
+    font-style:italic;
+}
+
+.bandeau_gris_left h2{
+    font-size: 1.3em;
+    font-weight: bold;
+    color:#424242;
+    margin-bottom:3px;
+}
+
+.bandeau_gris_left p{
+    color:#9a9899;
+    font-size:1em;
+}
+
+.bandeau_gris_center button{
+    background:linear-gradient(to bottom, #fefefe, #f7f7f7);
+    border:1px solid #dcd8d7;
+    border-radius:3px;
+    height:30px;
+    color: #64b5d3;
+    font-style:italic;
+    padding-left:10px;
+    padding-right:10px;
+    font-size:0.9em;
+    margin-top:20px;
+}
+
+.bandeau_gris_center button:hover{
+    color:#FFFFFF;
+    background:rgba(100,181,211,0.5);
+    border:1px solid #64b5d3;
+}
+
+ .bandeau_gris_right {
+    background-color: #FFFFFF;
+    height:7.15em;
+ }
+ 
+ .bandeau_gris_right h2{
+    font-size: 1.1em;
+    font-weight: bold;
+    color:#424242;
+    margin-bottom:3px;
+ }
+ 
+ .bandeau_gris_right p{
+    color:#9a9899;
+    font-size:0.8em;
+ }

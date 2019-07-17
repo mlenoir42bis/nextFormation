@@ -1,0 +1,30 @@
+Last.fm 
+
+infos :
+    http://www.last.fm/api
+    username: machinchoseform
+    password: 1234567violette
+    API Key: 746422493f9490fae032af34641611f1
+    Secret: is 84f3a1a13d711d521120723e3534e529
+
+Consignes :
+
+    ** Tout est réalisé en ajax, sans PHP **
+    ** L'appli est exécuté uniquement sur index.html **
+
+    Étape 1 : 
+        Créer une page affichant les 30 artistes les plus populaires du moment en France. Chaque artiste est représenté par une image. Au survol de la souris sur l'image, un carré de couleur portant de le nom de l'artiste s'élève du bas de l'image, pour la recouvrir en entier. 
+
+    Étape 2 : 
+        Créer un système de pagination permettant de voir les 30 artistes suivants/précédents. 
+
+    Étape 3 : 
+        Au clic de la souris sur l'image d'un artiste, afficher les meilleurs albums de celui-ci à l'écran, sans changer de page. Il est par exemple possible de faire animer les images des artistes vers la gauche (jusqu'à sortir de l'écran), et de faire entrer les images des albums de l'artiste cliqué par la droite. 
+        Un bouton "retour" devrait permettre de revenir à la liste des artistes précédemment consultée. 
+        Chaque album devrait être représenté comme les artistes (image + nom apparaissant au survol)
+
+    Étape 4 : 
+        Au clic de la souris sur l'image d'un album, faire disparaitre les albums au profit de la liste des titres de l'album. Même animation et même concept que l'étape 3. 
+
+    Étape 5 : 
+        Créer un champs de recherche par mots-clefs. Afficher les résultats comme en étape 1. 

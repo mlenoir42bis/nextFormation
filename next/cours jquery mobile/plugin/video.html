@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Video</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/themes/smoothness/jquery-ui.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+        <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+        <script src="js/imagesloaded.js"></script>
+        <script src="js/bigvideo.js"></script>
+        <script>
+            $(function () {
+                var BV = new $.BigVideo({useFlashForFirefox:false});
+                BV.init();
+                BV.show('video/oceans.mp4', {ambient:true}); //=> ambient:true, pas de son
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Bigvideo.js </h1>
+
+        <div style="position:relative;">
+            <p> Bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            <p> Bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            <p> Bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+            <p> Bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+        </div>
+
+
+    </body>
+</html>

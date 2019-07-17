@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>formulaire</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+		
+        
+        <div id="wrapper">
+            <form action="">
+                <fieldset>
+                    <legend>Votre identité</legend>
+                    <div class="form_field">
+                        <label>Nom</label><input type="text" placeholder="Prénom et nom" required autofocus/>
+                    </div>
+                    
+                    <div class="form_field">
+                        <label>Email</label><input type="email" placeholder="exemple yo@yo.com" required/>
+                    </div>
+                    
+                    <div class="form_field">
+                        <label>Téléphone</label><input type="tel" placeholder="par ex +331 60 86 01 01" required/>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Adresse de livraison</legend>
+                    <div class="form_field special">
+                        <label>Adresse</label><textarea></textarea>
+                    </div>
+                    
+                    <div class="form_field">
+                        <label>Code postal</label><input type="text" pattern="[0-9]{5}" />
+                    </div>
+                    
+                    <div class="form_field">
+                        <label>Pays</label><input type="text" />
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>informations CB</legend>
+                    <div class="form_field card">
+                        <label>Type de carte bancaire</label>
+                        <br />
+                        <input type="radio" value="1" name="card"><label class="visa">Visa</label>
+                        <input type="radio" value="2" name="card"><label class="amex">Amex</label>
+                        <input type="radio" value="3" name="card"><label class="master">Mastercard</label>
+                    </div>
+                    
+                    <div class="form_field">
+                        <label>N° de carte</label><input type="text" />
+                    </div>
+                    
+                    <div class="form_field">
+                        <label>Code de sécurité</label><input type="text" />
+                    </div>
+                    
+                    <div class="form_field">
+                        <label>Nom du porteur</label><input type="text" />
+                    </div>
+                </fieldset>
+                
+                <input type="submit" value="J'achète!" />
+            </form>
+        </div>
+        
+    </body>
+</html>

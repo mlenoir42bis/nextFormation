@@ -1,0 +1,24 @@
+Etapes PSD => HTML
+1 // Acheter le thème PSD
+2 // L'ouvrir dans photoshop
+3 // Etablir un zoning rapide pour déterminer nos éléments HTML
+4 // Créer le document index.html en posant toutes les balises des éléments sans se soucier du CSS.
+
+5// Récupérer les éléments du doc psd. Prendre l'outil de positionnement et cliquer sur "Auto-Select layer" pour pouvoir sélectionner les calques plus facilement.
+6// Récupérer l'image principal, 
+=> Sélectionner le calque de son masque.
+=> et sur le masque dans la fenetre calque Alt + Cmd + clique. La zone de l'image est sélectionnée.
+=> copier
+=> créer un nouveau document et coller l'image.
+7//  Créer la feuille de style main.css 
+8 // Déclarer la class .banner
+=> insérer l'image
+=> définir une hauteur et largeur = à la taille de l'image.
+
+9// Récupérer le logo
+Sélectionner le calque de texte du logo + Alt + Cmd + clique. et créer un nouveau document avec le logo.
+créer la balise header h1
+
+10/ Partie 2 => le CSS
+installer 960 grid system.
+placer dans le dossier css reset.css / text.css et 960.css

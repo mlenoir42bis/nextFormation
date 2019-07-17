@@ -1,0 +1,170 @@
+/* style */
+
+body{
+	font-family: arial;
+}
+
+#wrapper{
+	background-color: #FFFFFF;
+	width: 550px;
+	margin: 0 auto;
+}
+
+header{
+	height: 195px;
+	border-bottom: 2px solid #79a826;
+	background-image: url('../img/header_bg.png');
+	background-repeat: no-repeat;
+	background-position: 20px 0px; /*decale le background vers la droite*/
+	padding-top:65px;
+}
+
+#logo{
+	width:155px;
+	height:67px;
+	background-image: url('../img/logo.png');
+	margin-left: 20px;
+}
+
+nav ul {
+	list-style-type:none;
+	padding:0;
+}
+
+nav ul li{
+	display: inline-block;
+	background-color: #79a826;
+	padding: 0px 3px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+nav ul li a {
+	text-decoration:none;
+	color: #FFFFFF;
+	font-size:12px;
+	font-weight:bold;
+}
+
+nav{
+	margin-left:250px;
+	margin-top: 110px;
+}
+
+nav ul li a:hover{
+	text-decoration:underline;
+}
+
+#left{
+	width:180px;
+	float:left;
+}
+
+#right{
+	width:300px;
+	float:right;
+}
+
+/*pour règler le problème de l'utilisation des float sur ancetre*/
+.clearfix:after{
+	content:'.';
+	width:0px;
+	height:0px;
+	clear:both;
+	display:block;
+	visibility:hidden;
+	line-height:0;
+}
+
+#main h2{
+	margin:15px 0px 10px 0px;
+	color: #feba00;
+	font-size:32px;
+	font-weight: normal;
+	letter-spacing: -2px; /* reduit l'espace entre les lettres */
+}
+
+.green{
+	color: #79a826;
+}
+
+.gras {
+	font-weight:bold;
+}
+
+.orange{
+	color: #feba00;
+}
+
+#main p{
+	font-size: 12px;
+	color: #929292;
+	line-height:12px;
+}
+
+.readmore{
+	text-decoration:none;
+	color: #feba00;
+	font-size: 16px;
+}
+
+.readmore:hover{
+	text-decoration:underline;
+}
+
+#entete_what img{
+	width:113px;
+	float:left;
+}
+
+#entete_what p{
+	width:170px;
+	float:right;
+	margin:0;
+}
+
+/* selectionne les elements <span class="green gras"> */
+span.green.gras{
+	display:block;
+	margin-bottom: 5px;
+}
+
+#right ul{
+	padding:0;
+	/* list-style-image: url('../img/puce.png'); */ /*change les puces*/
+	/*list-style-position: inside;*/ /* positionne les puces inside / oustide le flux html*/
+	list-style-type:none;
+}
+
+#right ul li {
+	background-image: url('../img/puce.png');
+	background-color: #ebebeb;
+	background-repeat: no-repeat;
+	margin-bottom:2px;
+	height:16px;
+	border-radius:5px;
+	color: #79a826;
+	font-weight:bold;
+	font-size:12px;
+	width: 272px;
+	padding-left:20px;
+}
+
+#main{
+	padding:0 15px;
+}
+
+#separator{
+	border-right:2px solid #ebebeb;
+	margin-top:30px;
+	height:200px;
+	width:10px;
+	float:left;
+}
+
+footer p{
+	text-align:right;
+	color: #929292;
+	font-size: 12px;
+	padding-right: 15px;
+}

@@ -1,0 +1,194 @@
+﻿#----------------------------------------#
+#     CREATION DE LA BASE DE DONNEES     #
+#----------------------------------------#
+ #Suppression de la base si elle existe#
+DROP DATABASE db_ititech;
+CREATE DATABASE IF NOT EXISTS DB_ITITECH;
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#     INDIQUER LA BASE SUR LAQUELLE      #
+#   S'EFFECTUE LA CREATION DES TABLES    #
+#----------------------------------------#
+
+USE DB_ITITECH;
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#     CREATION DE LA TABLE TECHNICIENS   #
+#----------------------------------------#
+
+
+CREATE TABLE IF NOT EXISTS T_tech
+ (
+  id_tech     	INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nom_tech    	VARCHAR(50) NOT NULL,
+  prenom_tech   VARCHAR(50) NOT NULL,
+  date_embauche DATE NOT NULL
+);
+
+  #--Insertion des données dans la table techniciens--#
+
+TRUNCATE t_tech;  
+INSERT INTO t_tech(id_tech,nom_tech, prenom_tech,date_embauche)
+VALUES (null,"DUPONT", "Jean","2010-05-05"),
+       (null,"DURANT","Paul","2010-05-10"),
+       (null,"LEFEVRE","Thomas","2011-02-10"),
+       (null,"MARTY","Franck","2011-02-15"),
+       (null,"MULLIEZ", "Patrice","2011-04-04"),
+       (null,"DUMOULIN","Paul","2011-09-09"),
+       (null,"EDOUARD","Alain","2012-01-04"),
+       (null,"DUBOIS","Nicolas","2012-01-14"),
+       (null,"MOUTIER","Benjamin","2012-04-05"),
+       (null,"DUPUIS","Stéphane","2012-11-10"),
+       (null,"NEUCHATEL", "Paolo","2012-11-29"),
+       (null,"MURIER","Théo","2014-01-04"),
+       (null,"LEBLANC","Jacques","2014-04-05"),
+       (null,"MATISSE","Mathias","2014-04-09"),
+       (null,"MILATINI", "Léo","2014-04-15"),
+       (null,"DELAGE","Fabrice","2014-05-05"),
+       (null,"PRAGUIER","Fabien","2014-09-09"),
+       (null,"PERRIER","Frédéric","2014-09-10"),
+       (null,"PROSPER","Marcel","2014-09-10"),
+       (null,"LEPIN","Hervé","2014-10-15");
+
+   #----------------------------------------#
+
+
+#----------------------------------------#
+#     CREATION DE LA TABLE CLIENTS       #
+#----------------------------------------#
+
+
+CREATE TABLE IF NOT EXISTS T_client
+ (
+  id_clt     	INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  nom_clt    	VARCHAR(50) NOT NULL,
+  prenom_clt   VARCHAR(50) NOT NULL,
+  adr_clt      VARCHAR(70) NOT NULL,
+  cp_clt       INT         NOT NULL,
+  ville_clt    VARCHAR(50) NOT NULL
+);
+
+  #--Insertion des données dans la table clients--#
+
+TRUNCATE t_client;
+INSERT INTO t_client(id_clt, nom_clt, prenom_clt,adr_clt,cp_clt,ville_clt)
+VALUES (null,"DUHAMEL", "Franck","54 rue des églantiers",75010,"PARIS"),
+       (null,"DURANT","Sylvie","14 rue des amandiers",94140,"ALFORVILLE"),
+       (null,"LEFEVRE","Alain","25 avenue des platanes",91090,"EVRY"),
+       (null,"MULTIER","Robert","50 rue du chemin des bois",95420,"MAGNY EN VEXIN"),
+       (null,"DESCHAMPS", "Patrice","45 allée des baobabs",77300,"FONTAINEBLEAU"),
+       (null,"DA SILVA","Paul","10 avenue des genévriers",93000,"BOBIGNY"),
+       (null,"HENRY","Loic","150 Boulevard Haussmann",75008,"PARIS"),
+       (null,"DUBOIS","Frédéric","29 allée des près",77170,"BRIE-COMTE-ROBERT"),
+       (null,"MOUTIER","Pascal","59 rue des noisetiers",94130,"NOGENT SUR MARNE"),
+       (null,"DUPUIS","Stéphanie","1 avenue Foch",78120, "RAMBOUILLET"),
+       (null,"DAUBERT", "Louis","15 rue des peupliers",75005,"PARIS"),
+       (null,"THIRIEZ","Sylvain","10 rue des amandiers",94500,"CHAMPIGNY SUR MARNE"),
+       (null,"DUBOIS","Virginie","25 avenue des pins",91090,"ATHIS-MONS"),
+       (null,"HAHN","Thomas","50 rue du chemin vert",95110,"SANNOIS"),
+       (null,"BLANC", "Eric","40 allée des acacias",77630,"BARBIZON"),
+       (null,"FROMENT","Frédérique","10 avenue des chênes",93000,"BOBIGNY"),
+       (null,"EDOUARD","Fernand","150 Boulevard des capucines",75009,"PARIS"),
+       (null,"FROMENTIER","Nicole","25 allée des marronniers",77680,"ROISSY EN BRIE"),
+       (null,"DUBAULT","Benjamin","19 rue des tilleuls",94350,"VILLIERS SUR MARNE"),
+       (null,"DUPUIS","Valérie","1 avenue des marronniers",78530, "VERSAILLES"),
+       (null,"COLLOIS","Stéphane","59 avenue des peupliers",78400, "CHATOU"),
+       (null,"ETRALLY","Norbert","90 allée des chemins verts",78530, "LE CHESNAY"),
+       (null,"DE LA RENARDIERE","Antoine","29 bis avenue du Général de Gaulles",92140, "CLAMART"),
+       (null,"DUCHAUSOY","Martine","41 rue Lamartine",92420, "VAUCRESSON"),
+       (null,"MARTY","Tom","70 rue de l'essai",75005,"PARIS");
+
+   #----------------------------------------#
+
+#----------------------------------------#
+#     CREATION DE LA TABLE SPECIALITE    #
+#----------------------------------------#
+
+CREATE TABLE IF NOT EXISTS T_specialite
+ (
+  id_spe        INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  libelle_spe   VARCHAR(50)
+ );
+
+
+ #--Insertion des données dans la table spécialité--#
+
+TRUNCATE t_specialite;
+INSERT INTO t_specialite(id_spe,libelle_spe)
+VALUES (null,"DOMOTIQUE"),
+       (null,"ELECTRICITE"),
+       (null,"MACONNERIE"),
+       (null,"INSTALLATION DE PISCINE"),
+       (null,"CHARPENTIER/COUVREUR"),
+       (null,"CARRELEUR"),
+       (null,"PLOMBERIE"),
+       (null,"TAPISSERIE"),
+       (null,"ESPACES VERTS"),
+       (null,"INSTALLATION DE CUISINE");
+
+#----------------------------------------#
+
+
+#----------------------------------------#
+#    CREATION DE LA TABLE INTEVENTIONS   #
+#----------------------------------------#
+
+CREATE TABLE IF NOT EXISTS T_intervention
+ (
+  id_interv        INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  type_interv      VARCHAR(50) NOT NULL,
+  date_interv      DATE NOT NULL,
+  montant_interv   DOUBLE NOT NULL
+ );
+
+ #--Insertion des données dans la table interventions--#
+
+TRUNCATE t_intervention;
+INSERT INTO t_intervention(id_interv, type_interv, date_interv, montant_interv)
+VALUES (null,"Mise aux normes panneau électrique","2010-05-10",500),
+       (null,"Installation plafonnier dans le salon","2010-05-14",25.00),
+       (null,"Dalle ciment sur terrasse extérieure à terminer","2011-10-10",4000),
+       (null,"Evier de salle de bain à changer", "2012-01-02",250),
+       (null,"Joint robinet cuisine defectueux","2012-01-04",15),
+       (null,"Carreler salon de 25m2","2014-09-09",2000),
+       (null,"Toiture à réparer suite à des intempéries",2014-09-15,5000),
+       (null,"Pose de tuiles","2014-02-19",2000),
+       (null,"Tonte de pelouse et élagage de haies","2014-02-02",50),
+       (null,"Entretien potager","2014-02-02",50);
+
+#----------------------------------------#
+#      CREATION DE LA TABLE VEHICULES    #
+#----------------------------------------#
+
+CREATE TABLE IF NOT EXISTS T_vehicule
+ (
+  id_vehicule      INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  marque_vehicule VARCHAR(25) NOT NULL,
+  type_vehicule VARCHAR(25) NOT NULL
+ );
+
+
+#--Insertion des données dans la table véhicules--#
+
+TRUNCATE T_vehicule;
+INSERT INTO t_vehicule(id_vehicule,marque_vehicule, type_vehicule)
+VALUES (null,"RENAULT","Fourgonnette"),
+       (null,"MERCEDES", "Utilitaire 8m3"),
+       (null,"BMW", "525"),
+       (null,"RENAULT","Poid lourd 15 tonnes"),
+       (null,"MERCEDES", "Utilitaire 25m3"),
+       (null,"RENAULT","Trafic"),
+       (null,"PEUGEOT","Camion-benne"),
+       (null,"CITROEN","Berlingo"),
+       (null,"FIAT","Ducato benne"),
+       (null,"FIAT","Fourgon");
+
+
+
+

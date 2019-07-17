@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 mars 2015, 17:06:50
+    Author     : stagiaire
+*/
+
+#accueil div[data-role=main]{
+    text-align:center;
+    margin-top:100px;
+}
+
+#loading{
+    margin-top:10px;
+    font-weight:bold;
+    display:none;
+}
+
+#loading img{
+    vertical-align:middle;
+    margin-right:5px;
+}
+
+#ma_carte{
+    width:200px;
+    height:200px;
+}

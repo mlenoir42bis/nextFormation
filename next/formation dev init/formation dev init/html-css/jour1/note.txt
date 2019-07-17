@@ -1,0 +1,19 @@
+contact formateur:
+m.de.ubela@gmail.com
+fabien.bouvier@gmail.com
+
+site d'image:
+gettyimage
+fotolia
+photodune
+
+
+Generatuer d'image:
+placehold.it
+
+
+generateur de faux texte:
+lorem ipsum
+
+multi lien par zone sur image:
+recherche google: area shape.tools

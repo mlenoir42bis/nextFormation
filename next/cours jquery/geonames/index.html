@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8" />
+	<title>Geonames AJAX | jQuery</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.2/flatly/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+	<div class="container">
+		<h1>Geonames AJAX</h1>
+		<div class="row">
+			<div class="col col-xs-3">
+
+				<h2>Recherche</h2>
+
+				<form id="search_form">
+
+					<div class="form-group">
+						<label for="search_input">Votre recherche</label>
+						<input type="text" name="search_input" id="search_input" value="" class="form-control" placeholder="Ville, pays, lieu, etc..." />
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-success">Lancer !</button>
+					</div>
+
+				</form>
+
+				<img src="img/preloader.gif" id="preloader" />
+			</div>
+			<div class="col col-xs-9">
+				<h2>Résultats</h2>
+				<div id="search_results">
+					<p>Aucun résultat pour le moment</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

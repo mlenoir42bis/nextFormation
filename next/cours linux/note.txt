@@ -1,0 +1,13 @@
+*******************activer mode pleine ecran machine virtuel****************
+sudo apt-get install virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+
+
+*****accès reseau machine virtuel a partir de windows:*****
+
+1) virtualbox->machine virtuel->config->reseau->mode d'acees reseau->accès par pont
+2) ajout ip machine virtuel + nom page dans host windows (C:\Windows\System32\drivers\etc)
+
+****GIT*******
+
+install git: tuto -> propal.net/blog/
+		tuto -> trygit
